@@ -3,7 +3,6 @@ import {motion} from 'framer-motion';
 import Header from "./Header";
 import Footer from "./Footer";
 import configurator from './images/configurator.png'
-import vs2 from './images/vs2.png'
 import blog from './images/blog.png'
 
 const transition = {duration: 1, ease: [0.43, 0.13, 0.23, 0.96]};
@@ -17,8 +16,8 @@ const Lander2  = () => {
         exit={{opacity: 0}}
         transition={transition}
         >
-            <Header />
-            <section className='section-header'>
+            <Header menu="landing" />
+            <section className='section-header lander2'>
                 <p>We build custom solutions to help businesses from all backgrounds gain a competitve edge.</p>
             </section>
             <section className='section-choice'>
@@ -38,7 +37,7 @@ const Lander2  = () => {
                 </div>
                 <div className="sectioned-split split2">
                     <img src={configurator} />
-                    <h3>Pricing Configurator Embed</h3>
+                    <h3>Lead Generation Configurator</h3>
                     <p className="sectioned-message">Increase conversions and stop customers from leaving your site.</p>
                     <Link style={{'display':'flex', 'alignItems': 'center'}} className="link link--arrowed seemoreLink" to="/pricing-config">
                         <p className="btnClass">See more</p>

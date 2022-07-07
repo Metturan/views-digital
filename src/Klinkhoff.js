@@ -27,7 +27,7 @@ function Klinkhoff() {
     exit={{opacity: 0}}
     transition={transition}
     >
-    <Header/>
+    <Header menu="shopify"/>
     <div className='case-study-page'>
       <section className="hero klink">
         <h1>Klinkhoff Art Gallery</h1>

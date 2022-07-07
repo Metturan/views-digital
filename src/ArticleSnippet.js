@@ -8,7 +8,7 @@ function ArticleSnippet(props) {
         <div className='tags'>
           {
             props.tags.map(tag => {
-              return <span>{tag}</span>
+              return <span key={tag}>{tag}</span>
             })
           }
         </div>

@@ -757,7 +757,7 @@
     text-align: center;
   }
   .featured p {
-    margin: 50px auto 110px auto;
+    margin: 30px auto 0px auto;
   }
   .cta-title {
     margin-bottom: 20px;
@@ -814,10 +814,13 @@
     padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
   }
   .intro-featured {
-    margin: 100px 0;
+    margin: 50px auto;
+    width: 90%;
+    text-align: center;
+    max-width: 1005px;
   }
   .featured p {
-    line-height: 2;
+    line-height: 1.6;
   }
   .intro-featured h2 {
     line-height: 1.5;
@@ -864,10 +867,6 @@
   .second-header a {
     text-decoration: none;
   }
-  .case-study-page {
-    width: 100%;
-    margin: 100px auto 0;
-  }
   .case-study-landing-image {
     margin: 90px auto 100px;
     width: 92%;
@@ -898,22 +897,31 @@
     margin: 0 auto;
     display: flex;
     padding: 30px 0;
+    max-width:1300px;
   }
   .shopify-hero {
-    background: #000;
-    color:#fff;
+    background: linear-gradient(90deg, #7ce0ff 16%, #87e2e2 26%, #a4e997 48%, #d0f224 79%);
+    color: #000;
+    padding-top:95px;
   }
 
   p {
     line-height: 1.2;
     font-size:22px;
   }
+  .right-content {
+    display:flex;
+    width:65%;
+    justify-content: center;
+  }
   .right-content img {
     transform: rotate(7deg);
+    width: 80%;
+    max-width: 700px;
   }
   .left-content h1 {
     font-size: 45px;
-    font-weight:bold;
+    font-family:proxima-bold;
     margin-bottom: 20px;
     margin-top: 0;
   }
@@ -956,12 +964,12 @@
     letter-spacing: 1px;
     margin-top: 26px;
     border-radius: 8px;
-    color: #000;
+    color: #fff;
     border: 1px solid #000;
     transition: all 0.4s linear;
     cursor: pointer;
     font-weight: bold;
-    background:linear-gradient(90deg, #7ce0ff 16%, #87e2e2 26%, #a4e997 48%, #d0f224 79%);
+    background:#000;
 
   }
   .left-content button:hover {
@@ -978,13 +986,13 @@
     min-width: 518px;
   }
   .left-content p {
-    font-size: 22px;
-    max-width: 518px;
+    font-size: 27px;
+    max-width: 461px;
   }
   
-  .page-body {
+  /* .page-body {
     margin-top: 95px;
-  }
+  } */
   
   .clusterImages img {
     width: 100%;
@@ -1016,7 +1024,7 @@
   }
   
   .projectInfo {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1061,7 +1069,7 @@
   }
   
   .clusterImages {
-    width: 60%;
+    width: 80%;
     position: Relative;
     border-radius: 20px;
     box-shadow: 0px 0px 40px 0px #ddd;
@@ -1298,7 +1306,7 @@
       margin: 30px 0 90px;
     }
     .intro-vid {
-      margin: 120px auto 45px auto;
+      margin: 75px auto 20px auto;
     }
     .articlesnippet > div {
       width: 100%;
@@ -1315,11 +1323,15 @@
     }
     .projectInfo {
       width: 100%;
-      margin-top: 32px;
+      margin-top: 15px;
       padding-left: 0;
     }
     .projects-section {
       flex-direction: column;
+      padding: 30px 0;
+    }
+    .pricingStructure {
+      margin-top: 30px;
     }
     .right-content {
       margin-top: 30px;

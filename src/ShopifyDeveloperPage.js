@@ -15,6 +15,10 @@ import ProjectExample from './ProjectExample'
 import HeroImage from './images/shopifysites.png'
 import articleSnippetImg from './articleImages/codemongo.png'
 import articleFeaturedImage from './articleImages/shopify-article-banenr.jpeg'
+import articleHydrogenImage from './articleImages/hydrogen.png'
+
+import novabloom1 from './casestudyImages/novabloom1.png'
+import novabloom2 from './casestudyImages/novabloom2.png'
 
 const nanourl = 'https://vimeo.com/567703280'
 const klinkurl = 'https://vimeo.com/567703881'
@@ -23,9 +27,6 @@ const intro = 'https://vimeo.com/576850296'
 const transition = {duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96]};
 
 function ShopifyDeveloperPage() {
-
-
-
   const ctaQuiz = useRef();
 
   function scrollToQuiz() {
@@ -42,7 +43,7 @@ function ShopifyDeveloperPage() {
     >
   
       <div className='page-body'>
-          <Header />
+          <Header menu='shopify' />
         <section className="shopify-hero">
           <div className='inner-hero'>
             <div className='left-content'>
@@ -63,6 +64,12 @@ function ShopifyDeveloperPage() {
         </section>
         <section className="projects">
           <ProjectExample 
+            image1={novabloom1}
+            caseLink='/novabloom'
+            classTitle='Novabloom'
+            title='Novabloom UK' 
+            desc='E-commerce, Shopify.' />
+          <ProjectExample 
             url={klinkurl}
             caseLink='/klinkhoff'
             classTitle='Klink'
@@ -80,6 +87,16 @@ function ShopifyDeveloperPage() {
         <section className="featured-example">
           <div className="page-width">
             <h2>Recent Articles</h2>
+            <ArticleSnippet 
+                tags={['Headless Commerce', 'Development']} 
+                date="July 5, 2022" 
+                title="Is a headless setup the right choice?" 
+                path="/blog/headless-right-choice"
+                img={articleHydrogenImage}
+                desc="Shopify recently announced Hydrogen+Oxygen a react framework for creating custom storefronts but is it for everyone?" 
+            />
+            <br/>
+            <br/>
             <ArticleSnippet 
                 tags={['Custom App', 'Development']} 
                 date="June 28, 2022" 

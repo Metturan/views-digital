@@ -151,6 +151,40 @@ body {
   font-size: 18px;
   font-display: swap;
 }
+.bucket {
+  margin-bottom:120px;
+}
+.bucket h2 {
+  line-height: 1.2;
+  font-size: 40px;
+  text-align: center;
+  font-family: proxima-bold;
+  margin-bottom:20px;
+}
+.left-bucket {
+  max-width:400px;
+}
+.right-bucket {
+  max-width:400px;
+}
+.right-bucket p:last-child {
+  margin-top: 25px;
+    text-align: center;
+    color: navy;
+    font-family: 'proxima-bold';
+    font-size:27px;
+}
+.bucket img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.bucket > div {
+  display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
 .funnels {
   background: #000;
 }
@@ -182,7 +216,6 @@ input[type=number] {
   display: Flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -211,7 +244,7 @@ input[type=number] {
   letter-spacing: 0.5px;
 }
 .inner-header > ul li {
-  margin-right: 50px;
+  margin-right: 42px;
 }
 .abs {
   position: absolute;

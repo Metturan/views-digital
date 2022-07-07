@@ -26,7 +26,7 @@ const Contact = () => {
       exit={{opacity: 0}}
       transition={transition}
       >
-            <Header />
+            <Header menu="landing"/>
             
             <div className="contact-container">
               <h2 className="page-title">Contact Us</h2>
