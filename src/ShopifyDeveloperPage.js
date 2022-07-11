@@ -6,7 +6,6 @@ import Header from './Header'
 import PricingSection from './Pricing'
 import Testimonials from './Testimonials'
 import ContactFormShopify from './ContactFormShopify'
-import Quiz from './Quiz'
 import {motion} from 'framer-motion';
 
 import './Shopify.css'

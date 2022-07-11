@@ -543,6 +543,13 @@ footer p {
   display:flex;
   flex-direction: column;
 }
+.navBtn {
+  font-family: 'proxima-bold';
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor:pointer;
+}
 .intro-services {
   margin-top:50px;
 }
@@ -550,7 +557,7 @@ footer p {
   margin-bottom: 15px;
 }
 .serviceItem h3 {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
   font-family: 'proxima-bold';
   margin-bottom: 8px;
@@ -650,10 +657,7 @@ footer p {
 
 .contact-container {
   min-height: calc(100vh - 100px);
-  /* background: #f4f4f4; */
-  background: #000;
-  color:#fff;
-  padding-bottom:50px;
+  padding-top:50px;
 }
 
 .specialBk {
@@ -683,13 +687,34 @@ color:#fff;
     margin: 0 auto;
     line-height: 1.2;
 }
-
+.footer-custom-contact .footHome{
+  background:#fff;
+  color:#000;
+  margin-top: unset;
+  border-top:unset;
+}
+.contact-container {
+  background:#000;
+  color:#fff;
+}
+.contact-container.contactShopify .normInp {
+  color:#fff;
+  background:#000;
+  border-bottom:1px solid #afafaf;
+}
+.contact-container.contactShopify {
+  background:#000;
+  color:#fff;
+}
+.contact-container.contactShopify textarea {
+  border: 1px solid #afafaf;
+}
 .normInp {
   padding: 10px;
-  color:#fff;
     font-size: 18px;
-    background: #000;
     outline: none;
+    color:#fff;
+    background:#000;
     appearance: auto;
     border: none;
     border-bottom: 1px solid #afafaf;
@@ -722,7 +747,7 @@ color:#fff;
 
 .emailContainer textarea {
   resize: none;
-  height: 100px;
+  height: 103px;
   border: 1px solid #afafaf;
   background: transparent;
   margin-top: 8px;

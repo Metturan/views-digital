@@ -23,13 +23,13 @@ function App() {
     <div className="App">
         <Routes>
           <Route element={<Lander2 />} path="/" exact />
-          <Route element={<PricingConfig />} path="/pricing-config" />
+          <Route element={<PricingConfig />} path="/lead-generation" />
           <Route element={<Earnings /> } path="/earnings" />
           <Route element={<Privacy />} path="/privacy-policy" />
           <Route element={<Terms />} path="/terms" />
           <Route element={<Klinkhoff />} path="/klinkhoff" />
           <Route element={<CaseNovaBloom/>} path="/novabloom" />
-          <Route element={<Contact />} path="/contact" />
+          <Route element={<Contact />} path="/shopify/contact" />
           <Route element={<ShopifyDeveloperPage />} path="/shopify" />
           <Route element={<Article />} path="/blog/shopify-20" />
           <Route element={<ArticleWebhook />} path="/blog/shopify-webhook" />

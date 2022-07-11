@@ -1,9 +1,8 @@
 
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser';
-import Header from './Header'
 
-const ContactFormShopify = () => {
+const ContactFormLeadGen = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -37,13 +36,6 @@ const ContactFormShopify = () => {
                     <label>Website</label>
                     <input className="normInp" type="text" name="user_website" placeholder='Enter your website address'/>
                     <br/>
-                    <label>Services</label>
-                    <select className="normInp" name="user_services">
-                      <option value="Shopify Custom App">Shopify Custom App</option>
-                      <option value="Headless Commerce">Shopify Headless Commerce</option>
-                      <option value="Shopify Custom Development">Shopify Custom Development</option>
-                    </select>
-                    <br/>
                     <label>Key Objectives / Description</label>
                     <textarea name="message" placeholder='Enter as much details as possible' />
                     <input className="specialBk" type="submit" value="Send" />
@@ -55,4 +47,4 @@ const ContactFormShopify = () => {
     )
 }
 
-export default ContactFormShopify;
+export default ContactFormLeadGen;

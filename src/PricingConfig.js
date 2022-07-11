@@ -2,7 +2,6 @@ import {useRef} from 'react'
 import {Link} from 'react-router-dom'
 import Header from './Header'
 import GreenButton from './GreenButton'
-import Quiz from './QuizContainer'
 import Footer from './Footer'
 import ContactFormShopify from './ContactFormShopify'
 import greenCheck from './images/greenCheck.png'
@@ -12,13 +11,18 @@ import kitchen from './images/kitchen.jpeg'
 import flooring from './images/flooring.jpeg'
 import windows from './images/windows.jpeg'
 import config from './images/config.png'
+import ContactFormLeadGen from './ContactFormLeadGen'
 
 
 const PricingConfig = () => {
   const quizRef = useRef();
+  const link1 = useRef();
+  const link2 = useRef();
+  const link3 = useRef();
+
     return (
       <>
-        <Header menu='config' />
+        <Header link1={link1} link2={link2} link3={link3} menu='config' />
         <section className='main'>
           <div className="main-inner-section">
             <h1><span className='green'>Home Service Professionals!</span> Are you tired of your website visitors leaving your site to check out your competitor's site?</h1>
@@ -35,26 +39,7 @@ const PricingConfig = () => {
             </article>
             <GreenButton el={quizRef}/>
 
-            {/* <article className="whatyouget">
-              <h2>What You Get</h2>
-              <div>
-                <div>
-                  <img src={whatyouget1} />
-                  <h3>The Prospect's Budget</h3>
-                  <p>No more wasting time on price shoppers.</p>
-                </div>
-                <div>
-                  <img src={whatyouget2} />
-                  <h3>When They Want The Job Done</h3>
-                  <p>Immediately or 6 months from now?</p>
-                </div>
-                <div>
-                  <img src={whatyouget3} />
-                  <h3>Did We Mention Exclusivity?</h3>
-                  <p>No more competing with 4 other roofers trying to close the same lead... and our leads are the same price or cheaper than lead aggergators.</p>
-                </div>
-              </div>
-            </article> */}
+
             <article className="bucket">
                 <h2>If your bucket <span className="italic">(website)</span> is leaking, do you keep pouring in more water <span className="italic">(traffic)</span>, or do you fix the leaks?</h2>
                 <img src={bucket} />
@@ -71,7 +56,7 @@ const PricingConfig = () => {
         </section>
 
         <section className='main2'>
-          <div className="main-inner-section">
+          <div ref={link1} className="main-inner-section">
             <article className="longSpeech">
               {/* <h2>How it works...</h2>
               <p>Where can you get leads like that? With their time frame and even their <span>BUDGET?</span></p>
@@ -134,7 +119,7 @@ const PricingConfig = () => {
               </article>
 
             </article>
-            <h3 className="casetitle">Case Studies</h3>
+            <h3 ref={link2} className="casetitle">Case Studies</h3>
             <article className="caseSnippets">
               <div className="caseSnippet">
                 <div><img src={kitchen} /></div>
@@ -178,8 +163,8 @@ const PricingConfig = () => {
           </div>
         </section>
         <h3 className="config-cta">Send us a message below. And we'll set up a demo for you to see how this can skyrocket your business!</h3>
-        <section style={{'margin':'0 auto','width':'90%'}}>
-          <ContactFormShopify />
+        <section ref={link3} style={{'margin':'0 auto','width':'90%'}}>
+          <ContactFormLeadGen />
         </section>
       
         <Footer />

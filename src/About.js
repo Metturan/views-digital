@@ -36,7 +36,7 @@ const About = () => {
         exit={{opacity: 0}}e
         transition={transition}
         >
-            <Header menu='landing'/>
+            <Header menu='shopify'/>
             <section className='hero-half'>
                 <div className="inner-hero">
                     <h1>About Us</h1>
