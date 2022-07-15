@@ -927,9 +927,11 @@
   }
   .cta-article {
     padding: 0 5%;
-    max-width: 800px;
     text-align: center;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
+  }
+  .cta-article p {
+    font-weight:bold;
   }
   .raw-title {
     padding-top: 30px;
@@ -1241,6 +1243,9 @@
   
   
   @media (max-width: 800px) {
+    .article .page-width {
+      width: 90%;
+    }
     .testies {
       padding: 0 30px 70px 30px;
     }

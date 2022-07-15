@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom'
+import logo from './images/viewsLogoCroppedWhite.png'
 const Footer = () => {
     return (
         <footer className="footHome">
           <div className="inner-footer">
-            <p className="logotop">VIEWS DIGITAL</p>
+            <p className="logotop"><img alt="Views Digital" src={logo} /></p>
             {/* <img src={gpartner} /> */}
             <p>Copyright © 2022 Viewscom Corp.</p>
             <p>Registered office address: 2967 Dundas St. W. #88, Toronto, ON M6P 1Z2. </p>

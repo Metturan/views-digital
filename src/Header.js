@@ -3,7 +3,7 @@ import {useRef} from 'react'
 import ButtonMailto from './ButtonMailto';
 import Menulist from './Menulist';
 
-import viewsLogo from './images/viewsLogo.png'
+import viewsLogo from './images/viewsLogoCropped.png'
 
 const Header = (props) => {
   const menu = useRef();

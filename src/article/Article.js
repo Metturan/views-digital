@@ -1,5 +1,6 @@
-import Quiz from '../Quiz'
+
 import Header from '../Header'
+import ContactFormShopify from '../ContactFormShopify'
 import Footer from '../Footer'
 // import featuredimage from '../articleImages/shopify-article-banenr.jpeg'
 import shopifyarticleimage from '../articleImages/shopify20articleimage.png'
@@ -9,11 +10,13 @@ import shopifyarticleimage3 from '../articleImages/shopify20articleimage3.png'
 function Article() {
   return (
     <div className="page-top article">
-      <Header />
-      <div style={ {backgroundColor: `#071436` } } className='hero-article'>
-        <h1>Shopify 2.0 - Should Small Business Owners Care?</h1>
-        <h4>July 13, 2021</h4>
-      </div>
+      <Header menu="shopify" />
+      <section className='hero-half articles'>
+          <div className="inner-hero">
+              <h1>Shopify 2.0 - Should Small Business Owners Care?</h1>
+              <p>July 13, 2021</p>
+          </div>
+      </section>
       <div className='page-width'>
         <br/>
         <br/>
@@ -39,6 +42,9 @@ function Article() {
       <div className='cta-article'>
         <p>If you'd like to get in touch and get some custom theme/app work done for your store. Reach out below by filling out the form.</p>
       </div>
+      <section style={{'margin':'0 auto','width':'90%'}}>
+      <ContactFormShopify />
+      </section>
       <Footer />
     </div>
   )

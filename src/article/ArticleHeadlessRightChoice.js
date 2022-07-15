@@ -1,6 +1,7 @@
 
 import Header from '../Header'
 import Footer from '../Footer'
+import ContactFormShopify from '../ContactFormShopify'
 
 import shopifyarticleimage from '../articleImages/hydrogen.png'
 import shopifyarticleimage2 from '../articleImages/customcms.png'
@@ -9,11 +10,13 @@ import shopifyarticleimage3 from '../articleImages/hydrogenadmin.png'
 function ArticleHeadlessRightChoice () {
   return (
     <div className="page-top article">
-      <Header />
-      <div style={ {backgroundColor: `#071436` } } className='hero-article'>
-        <h1>Is a headless setup the right choice?</h1>
-        <h4>July 5th, 2022</h4>
-      </div>
+      <Header menu="shopify" />
+      <section className='hero-half articles'>
+          <div className="inner-hero">
+              <h1>Is a headless setup the right choice?</h1>
+              <p>July 5th, 2022</p>
+          </div>
+      </section>
       <div className='page-width'>
         <br/>
         <br/>
@@ -46,6 +49,10 @@ function ArticleHeadlessRightChoice () {
       <div className='cta-article'>
         <p>If you think a headless setup is of interest to you, send us a message and let’s discuss how we can help.</p>
       </div>
+      <section style={{'margin':'0 auto','width':'90%'}}>
+      <ContactFormShopify />
+      </section>
+      
       <Footer />
     </div>
   )

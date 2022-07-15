@@ -396,6 +396,14 @@ footer p {
   flex-direction:column;
 }
 
+.hero-half.articles {
+  text-align: center;
+}
+.hero-half.articles p {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .hero-half .inner-hero {
   flex-direction: column;
   max-width: 1300px;
@@ -735,6 +743,10 @@ color:#fff;
   box-sizing: border-box;
   font-size: 25px;
   font-weight:bold;
+}
+
+.logotop img {
+  max-width:150px;
 }
 
 .contactShopify form > div:nth-child(2), .contactShopify form > div:last-child {

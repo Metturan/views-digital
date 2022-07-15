@@ -39,7 +39,7 @@ const Lander2  = () => {
                     <img src={configurator} />
                     <h3>Lead Generation Configurator</h3>
                     <p className="sectioned-message">Increase conversions and stop customers from leaving your site.</p>
-                    <Link style={{'display':'flex', 'alignItems': 'center'}} className="link link--arrowed seemoreLink" to="/pricing-config">
+                    <Link style={{'display':'flex', 'alignItems': 'center'}} className="link link--arrowed seemoreLink" to="/lead-generation">
                         <p className="btnClass">See more</p>
                         <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                         <g fill="none" stroke="#000" strokeWidth="1.5" strokeLinejoin="round" strokeMiterlimit="10">
