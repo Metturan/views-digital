@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion';
-import {useRef} from 'react'
+import {useRef, useEffect} from 'react'
+import { hotjar } from 'react-hotjar';
 import emailjs from '@emailjs/browser';
 import Header from './Header'
 import Footer from './Footer'
@@ -7,6 +8,9 @@ import Footer from './Footer'
 const transition = {duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96]};
 
 const Contact = () => {
+  useEffect(() => {
+    hotjar.initialize(3083253,6);
+  }, [])
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -67,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
             <section className="footer-custom-contact">
-              <Footer />
+              <Footer white={true} />
             </section>
             </motion.div>
     )

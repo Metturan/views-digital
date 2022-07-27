@@ -460,7 +460,7 @@ footer p {
 .varyBlack {
   background:#000;
   color:#fff;
-  margin:80px 0 0;
+  margin:0px 0 0;
 }
 .team {
   display: flex;
@@ -490,7 +490,7 @@ footer p {
 .introduction > div:first-child > span:last-child {
   margin-left: 10px;
   font-size: 22px;
-  font-weight: bold;
+  font-family: proxima-bold;
 }
 .introduction {
   max-width: 1300px;
@@ -516,31 +516,142 @@ footer p {
   flex-direction: column;
   position:relative;
   justify-content: flex-end;
-  padding: 50px;
+  margin: 50px;
   overflow: hidden;
 }
 .section-choice {
   display: flex;
   justify-content: space-between;
-  height: calc(100vh - 317px);
+  /* height: calc(100vh - 317px); */
 }
 .sectioned-split h3 {
   font-size: 25px;
-  font-weight: bold;
+  font-family: proxima-bold;
   margin-bottom: 20px;
 }
 .sectioned-split img {
-      /* display: none; */
-    /* position: absolute; */
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    height: 100%;
+    height: 20vw;
     object-fit: cover;
     /* opacity: 0.1; */
     margin-bottom: 50px;
 }
+.email-techstack > div > div {
+  display:flex;
+  align-items:Center;
+  margin-bottom: 25px;
+}
+.email-techstack > div > div span:last-child {
+  font-size:25px;
+  font-family: proxima-bold;
+  margin-left:20px;
+}
+.email-techstack {
+  display:flex;
+  align-items:center;
+  margin-bottom: 60px;
+}
+.email-market-price .price-item {
+  width:29%;
+}
+.email-market-price .sizes h3.active {
+  opacity:1;
+}
+.email-market-price {
+  margin: 80px auto;
+}
+.email-market-price .pricingStructure h2 {
+  font-size: 25px;
+}
+.email-techstack.normal {
+  margin-bottom: 0px;
+  padding-top:40px;
+}
+.email-techstack p {
+  max-width: 300px;
+}
+.email-info-box {
+  background: #000;
+  margin-bottom:20px;
+  color: #fff;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  display:flex;
+  align-items:center;
+}
+.service-spacing.email {
+  display:none;
+}
+.service-spacing.email.active {
+  display:flex;
+}
+.service-spacing.development {
+  display:none;
+}
+.service-spacing.development.active {
+  display:flex;
+}
+.threepoints > div {
+  margin-bottom:30px;
+  display:flex;
+}
+.service-cat {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+  align-items: center;
+}
+.ll {
+  font-size: 60px;
+  font-family: proxima-thin;
+  color:rgb(255, 71, 0);
+  text-decoration: none !important;
+  cursor: none !important;
+}
+.service-cat li {
+  margin: 0 20px;
+  cursor:pointer;
+  text-decoration: underline;
+}
+.dwnarrow {
+  max-width: 12px;
+  display: block;
+  margin: 20px auto;
+}
+.threepoints h3 {
+  text-align: center;
+  font-family: 'proxima-bold';
+  font-size: 35px;
+  margin-bottom: -40px;
+}
+.threepoints h2 {
+  width:33%;
+  line-height:1.3;
+  font-weight:bold;
+  font-size:25px;
+}
+.threepoints p {
+  width:66%;
+  box-sizing: border-box;
+  padding-left:50px;
+}
+.email-info-box p {
+  line-height: 1.5;
+  padding-right:80px;
+}
+.email-info-box img {
+  max-width: 215px;
+}
+.email-info-box img.group22 {
+  max-width:130px;
+}
+.email-info-box img.group33 {
+  max-width:188px;
+}
+
 .serviceItem {
   width: 31%;
   box-sizing: border-box;
@@ -550,6 +661,11 @@ footer p {
   margin-bottom: 35px;
   display:flex;
   flex-direction: column;
+}
+.emailLogos {
+  max-width: 800px;
+  margin: 36px auto 0px;
+  display: block;
 }
 .navBtn {
   font-family: 'proxima-bold';
@@ -648,7 +764,7 @@ footer p {
   max-width: 1300px;
   margin: 0 auto;
   line-height: 1.2;
-  font-weight: bold;
+  font-family: proxima-bold;
   width: 90%;
 }
 .section-header.lander2 p {
@@ -823,6 +939,9 @@ color:#fff;
 }
 
 @media screen and (max-width:900px) {
+  .email-techstack {
+    flex-direction: column;
+  }
   .section-choice {
     flex-direction: column;
     height: unset;
@@ -836,6 +955,27 @@ color:#fff;
   .contactShopify form > div:nth-child(2), .contactShopify form > div:last-child {
     padding-right: unset;
     width: 100%;
+  }
+  .threepoints h2 {
+    width:100%;
+  }
+  .threepoints p {
+    padding-top: 20px;
+    padding-left:0;
+    width:100%;
+  }
+  .threepoints > div {
+    flex-direction:column;
+  }
+  .email-market-price .price-item {
+    width:100%;
+    margin: 20px 0;
+  }
+  .email-info-box p {
+    padding-right: unset;
+  }
+  .email-info-box {
+    flex-direction: column;
   }
   .contactShopify form {
     flex-direction: column;
@@ -863,7 +1003,7 @@ color:#fff;
     width: unset;
   }
   .sectioned-split {
-    padding: 30px;
+    margin: 30px;
   }
   .inner-header {
     padding: 0;

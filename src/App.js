@@ -1,4 +1,3 @@
-import {useRef} from 'react'
 import {Routes, Route} from 'react-router-dom'
 import './App.css';
 import Home from './Home'
@@ -17,13 +16,13 @@ import CaseNovaBloom from './CaseNovaBloom';
 import About from './About'
 import Services from './Services';
 import ShopifyDeveloperPage from './ShopifyDeveloperPage';
+import EmailMarketing from './EmailMarketing';
 
 function App() {
   return (
     <div className="App">
         <Routes>
           <Route element={<Lander2 />} path="/" exact />
-          <Route element={<PricingConfig />} path="/lead-generation" />
           <Route element={<Earnings /> } path="/earnings" />
           <Route element={<Privacy />} path="/privacy-policy" />
           <Route element={<Terms />} path="/terms" />
@@ -31,14 +30,13 @@ function App() {
           <Route element={<CaseNovaBloom/>} path="/novabloom" />
           <Route element={<Contact />} path="/shopify/contact" />
           <Route element={<ShopifyDeveloperPage />} path="/shopify" />
+          <Route element={<EmailMarketing />} path="/shopify/email-marketing"  />
           <Route element={<Article />} path="/blog/shopify-20" />
           <Route element={<ArticleWebhook />} path="/blog/shopify-webhook" />
           <Route element={<ArticleHeadlessRightChoice />} path="/blog/headless-right-choice"/>
           <Route element={<About />} path="/shopify/about" />
-          <Route element={<About />} path="/pricing-config/about" />
           <Route element={<Services />} path="/shopify/services" />
         </Routes>
-
     </div>
   );
 }

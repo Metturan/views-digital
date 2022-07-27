@@ -906,7 +906,7 @@
   }
 
   p {
-    line-height: 1.2;
+    line-height: 1.4;
     font-size:22px;
   }
   .right-content {
@@ -1243,14 +1243,26 @@
   
   
   @media (max-width: 800px) {
+    .quizShopify {
+      margin-top: 0;
+    }
     .article .page-width {
       width: 90%;
     }
     .testies {
       padding: 0 30px 70px 30px;
     }
+    .left-content {
+      margin-right:0;
+      min-width:unset;
+      width:100%;
+    }
+    .left-content p {
+      font-size:20px;
+    }
     p {
       font-size: 18px;
+      line-height:1.3;
     }
     .stars img {
       max-width: 15px;
@@ -1407,6 +1419,9 @@
   }
   
   @media (max-width: 500px) {
+    .sectioned-split img {
+      height: 45vw;
+    }
     .about p, .bodyContainer > div:first-child, .bodyContainer > div:last-child {
       font-size: 3.8vw;
     }

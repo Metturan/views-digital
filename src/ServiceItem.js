@@ -6,7 +6,7 @@ const ServiceItem = (props) => {
             <div className="bottomBar">
                 <div>
                     <span>timeline</span>
-                    <span>{props.days} days</span>
+                    <span>{props.days}</span>
                 </div>
                 <div>
                     <span>starting at</span>

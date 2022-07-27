@@ -1,13 +1,20 @@
+import {useEffect} from 'react'
 import { Link } from "react-router-dom";
+import { hotjar } from 'react-hotjar';
+
+
 import {motion} from 'framer-motion';
 import Header from "./Header";
-import Footer from "./Footer";
-import configurator from './images/configurator.png'
+import klaviyo from './images/kk.jpg'
 import blog from './images/blog.png'
 
 const transition = {duration: 1, ease: [0.43, 0.13, 0.23, 0.96]};
 
 const Lander2  = () => {
+    useEffect(() => {
+        hotjar.initialize(3083253,6);
+    }, [])
+   
     return (
         <motion.div 
         key="shopifydiv"
@@ -16,15 +23,15 @@ const Lander2  = () => {
         exit={{opacity: 0}}
         transition={transition}
         >
-            <Header menu="landing" />
+            <Header menu="shopify" />
             <section className='section-header lander2'>
-                <p>We build custom solutions to help businesses from all backgrounds gain a competitve edge.</p>
+                <p>We are a Shopify Plus Agency specializing in development and email marketing</p>
             </section>
             <section className='section-choice'>
                 <div className="sectioned-split split">
                     <img src={blog} />
-                    <h3>Shopify Development</h3>
-                    <p className="sectioned-message">Custom app solutions, headless commerce solutions, api integrations.</p>
+                    <h3>Shopify App Development</h3>
+                    <p className="sectioned-message">Custom app solutions, Theme app extensions, headless commerce solutions, api integrations.</p>
                     <Link style={{'display':'flex', 'alignItems': 'center'}} className="link link--arrowed seemoreLink" to="/shopify">
                         <p className="btnClass">See more</p>
                         <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -36,9 +43,9 @@ const Lander2  = () => {
                     </Link>
                 </div>
                 <div className="sectioned-split split2">
-                    <img src={configurator} />
-                    <h3>Lead Generation Configurator</h3>
-                    <p className="sectioned-message">Increase conversions and stop customers from leaving your site.</p>
+                    <img src={klaviyo} />
+                    <h3>Klaviyo Email marketing</h3>
+                    <p className="sectioned-message">Connect with your customers in a meaningful way that makes them order over and over agin.</p>
                     <Link style={{'display':'flex', 'alignItems': 'center'}} className="link link--arrowed seemoreLink" to="/lead-generation">
                         <p className="btnClass">See more</p>
                         <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">

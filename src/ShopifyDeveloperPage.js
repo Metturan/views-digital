@@ -1,4 +1,5 @@
-import {useRef} from 'react'
+import {useRef, useEffect} from 'react'
+import { hotjar } from 'react-hotjar';
 import ResponsivePlayer from './ResponsivePlayer'
 import ArticleSnippet from './ArticleSnippet'
 import Footer from './Footer'
@@ -26,6 +27,9 @@ const intro = 'https://vimeo.com/576850296'
 const transition = {duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96]};
 
 function ShopifyDeveloperPage() {
+  useEffect(() => {
+    hotjar.initialize(3083253,6);
+  }, [])
   const ctaQuiz = useRef();
 
   function scrollToQuiz() {
