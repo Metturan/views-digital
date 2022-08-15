@@ -55,11 +55,11 @@ function Pricing () {
           <PriceItem 
             name='Theme edits'
             item1detail='1 day'
-            item2detail='$75' />
+            item2detail='$100' />
           <PriceItem 
             name='Setup Facebook tracking pixel' 
             item1detail='1 day' 
-            item2detail='$75' />
+            item2detail='$100' />
           <PriceItem 
             name='Slide out cart' 
             item1detail='2 days' 

@@ -8,8 +8,8 @@ const TestimonialItem = (props) => {
                     <p>{props.desc}</p>
                     <span className="client">{props.client}</span>
                 </div>
-                <div className='starsNclient'>
-                    <span className="stars">
+                <div className={`starsNclient ${props.last == true ? 'starlast' : null}`}>
+                    <span className={`stars`}>
                         <img src={star} />
                         <img src={star} />
                         <img src={star} />

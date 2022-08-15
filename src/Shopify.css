@@ -252,7 +252,8 @@
     opacity: 0.45;
   }
   .price-item {
-    width: 270px;
+    width:21%;
+    min-width:270px;
     box-sizing: border-box;
     box-shadow: 0px 0px 24px 0px #aaa;
     margin: 30px 20px;
@@ -745,7 +746,7 @@
     text-align: center;
   }
   .featured-example {
-    margin: 30px 0 90px;
+    margin: 30px 0 0px;
   }
   .featured-example .page-width > h2 {
     text-align: center;
@@ -836,9 +837,14 @@
   .contact-container.contactShopify {
     min-height: unset;
   }
+  .letstalk {
+    text-align: center;
+    font-family: 'proxima-bold';
+    font-size: 35px;
+  }
 
   .quizShopify {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 
   .contactShopify .emailContainer {
@@ -907,7 +913,7 @@
 
   p {
     line-height: 1.4;
-    font-size:22px;
+    font-size:19px;
   }
   .right-content {
     display:flex;
@@ -920,7 +926,7 @@
     max-width: 700px;
   }
   .left-content h1 {
-    font-size: 45px;
+    font-size: 53px;
     font-family:proxima-bold;
     margin-bottom: 20px;
     margin-top: 0;
@@ -948,7 +954,7 @@
   .intro-vid {
     max-width: 900px;
     width: 90%;
-    margin: 70px auto 30px auto;
+    margin: 40px auto 0px auto;
   }
   
   .article .page-width {
@@ -1045,6 +1051,9 @@
   .projectInfo p {
       margin-bottom: 15px;
   }
+  .pricingStructure {
+    padding-top:40px;
+  }
 
   .pricingStructure h2 {
       font-weight:bold;
@@ -1066,7 +1075,7 @@
     width: 90%;
     margin: 0 auto;
     display: flex;
-    padding: 50px 0;
+    padding: 20px 0;
     max-width: 1300px;
   }
   
@@ -1095,7 +1104,7 @@
 
   .testy-desc {
     display: flex;
-    align-items: center;
+    flex-direction:column;
     justify-content: space-between;
   }
 
@@ -1111,7 +1120,7 @@
   }
 
   .desc-length {
-      max-width:500px;
+      max-width:600px;
   }
 
   .testies {
@@ -1138,9 +1147,13 @@
   .stars img {
       max-width: 20px;
   }
+  .starlast {
+    margin: 15px 0 0 !important;
+  }
   .starsNclient {
       width:104px;
     display:flex;
+    margin: 15px 0 40px;
     justify-content: center;
     align-items: center;
   }
@@ -1167,6 +1180,7 @@
     border: 1px solid #eee;
     padding: 10px 25px;
     border-radius: 9px;
+    font-size: 16px;
     display: block;
     margin: 0 6px;
   }
@@ -1199,9 +1213,21 @@
     overflow: hidden;
     display: flex;
     box-sizing: border-box;
-    height: 460px;
-    max-width: 1300px;
+    /* height: 460px; */
+    /* max-width: 1300px; */
     margin: 0 auto;
+  }
+
+  .articles-recent {
+    flex-direction:column !important;
+    padding-top:20px;
+    padding-bottom: 10px;
+  }
+  .introduction.articles-recent > div:first-child {
+    padding-bottom:40px;
+  }
+  .introduction.articles-recent > div:last-child {
+    width:100% !important;
   }
   
   .footer > div:last-child ul {
@@ -1231,6 +1257,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height:420px;
+  }
+  .nopad {
+    padding: 0 !important;
   }
   
   .footer {
@@ -1238,13 +1268,19 @@
     background: #eee;
     display: flex;
   }
+  .testies-last {
+    display:block !important;
+  }
   
   /* Responsive */
   
   
   @media (max-width: 800px) {
+    .testy-desc p {
+      font-size: 18px !important;
+    }
     .quizShopify {
-      margin-top: 0;
+      margin-top: 20px;
     }
     .article .page-width {
       width: 90%;
@@ -1271,7 +1307,7 @@
       width: 84px;
     }
     .desc-length {
-      max-width: calc(100% - 104px);
+      max-width: 100%;
     }
     .datesnippet {
       font-size: 18px;
@@ -1320,7 +1356,7 @@
       text-align: center;
     }
     .featured-example {
-      margin: 30px 0 90px;
+      margin: 30px 0 0px;
     }
     .intro-vid {
       margin: 75px auto 20px auto;
@@ -1330,10 +1366,10 @@
     }
     .articlesnippet {
       flex-direction: column;
-      height: 600px;
+      height: 655px;
     }
     .titlesnippet {
-      font-size: 21px;
+      font-size: 19px;
     }
     .clusterImages {
       width: 100%;
@@ -1345,7 +1381,7 @@
     }
     .projects-section {
       flex-direction: column;
-      padding: 30px 0;
+      padding: 20px 0;
     }
     .pricingStructure {
       margin-top: 30px;
@@ -1419,6 +1455,17 @@
   }
   
   @media (max-width: 500px) {
+    .introduction > div:first-child > span:last-child {
+      white-space:nowrap;
+      font-size: 20px;
+    }
+    .tags span {
+      padding: 10px 6px;
+    }
+    .price-item {
+      width: 90%;
+      margin: 30px 20px 15px;
+    }
     .sectioned-split img {
       height: 45vw;
     }
