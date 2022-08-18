@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
-          <Route element={<Lander2 />} path="/" exact />
+          <Route element={<ShopifyDeveloperPage />} path="/" exact />
           <Route element={<Earnings /> } path="/earnings" />
           <Route element={<Privacy />} path="/privacy-policy" />
           <Route element={<Terms />} path="/terms" />

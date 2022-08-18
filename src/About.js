@@ -87,7 +87,7 @@ const About = () => {
             <section className='widths'>
                 <ContactFormShopify />
             </section>
-            <Footer />
+            <Footer white={true} />
             
         </motion.div>
     )

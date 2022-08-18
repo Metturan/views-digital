@@ -205,19 +205,22 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 .header {
-  /* background: #000; */
+  background: #000;
   position: fixed;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
-  top: 17px;
+  top: 0px;
+  color:#fff;
 }
-.inner-header {
-  height: 80px;
-  display: Flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+.outline {
+  border: 1px solid #fff;
+  padding: 5px 12px;
+  border-radius: 23px;
+}
+.inner-header a {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family:proxima-regular;
 }
 .inner-header p {
   color: #fff;
@@ -231,10 +234,7 @@ input[type=number] {
   margin: 0 auto;
   max-width: 1200px;
 }
-.inner-footer {
-  margin: 0 auto;
-  max-width: 1200px;
-}
+
 .inner-header > ul {
   width: 65%;
   display: flex;
@@ -378,10 +378,7 @@ margin-bottom: 75px;
   padding-top: 80px;
   color: #fff;
 }
-.inner-footer {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .inner-foot h2 {
   font-size: 16px;
   letter-spacing: 1px;
@@ -541,9 +538,6 @@ margin-bottom: 75px;
   position: relative;
 }
 
-.App {
-  border:9px solid #000;
-}
 .video {
   object-fit: cover;
   width: 100vw;
@@ -636,8 +630,19 @@ margin-bottom: 75px;
 .logotop {
   font-family: proxima-bold;
   letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+.foothome .logotop {
+  margin-bottom: 60px;
+}
+.logotop ul {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  font-size: 16px;
+}
 .link {
   color: #2175ff;
   cursor: pointer;
@@ -841,5 +846,22 @@ margin-bottom: 75px;
   }
   .inner-header .logo {
     width: 103px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footHome .logotop {
+    flex-direction:column;
+  } 
+  .footHome .logotop ul {
+    width:unset;
+    margin: 25px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .regulation-links {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
   }
 }

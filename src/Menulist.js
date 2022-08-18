@@ -13,10 +13,10 @@ const Menulist = (props) => {
         return (
             <>
                 <li><Link to="/shopify">Shopify Development</Link></li>
-                <li><Link to="/shopify/email-marketing">Email Marketing</Link></li>
+                {/* <li><Link to="/shopify/email-marketing">Email Marketing</Link></li> */}
                 <li><Link to="/shopify/about">About</Link></li>
                 <li><Link to="/shopify/services">Services</Link></li>
-                <li><Link to="/shopify/contact" >Get in Touch</Link></li>
+                <li><Link className="outline" to="/shopify/contact" >Get in Touch</Link></li>
             </>
         )
     }
@@ -35,7 +35,7 @@ const Menulist = (props) => {
         return (
             <>
                 <li><Link to="/shopify">Shopify Development</Link></li>
-                <li><Link to="/shopify/email-marketing">Email marketing</Link></li>
+                {/* <li><Link to="/shopify/email-marketing">Email marketing</Link></li> */}
                 <li><Link to="/contact" >Get in Touch</Link></li>
             </>
         )

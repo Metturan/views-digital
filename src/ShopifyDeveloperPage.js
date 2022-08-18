@@ -8,7 +8,10 @@ import PricingSection from './Pricing'
 import Testimonials from './Testimonials'
 import ContactFormShopify from './ContactFormShopify'
 import TechStackSection from './TechStackSection';
+import WhyChooseViews from './WhyChooseViews'
 import downArrow from './images/downarrow.png'
+import expert from './images/shopify-experts-logo-3.png'
+
 import {motion} from 'framer-motion';
 
 import './Shopify.css'
@@ -20,7 +23,6 @@ import articleFeaturedImage from './articleImages/shopify-article-banenr.jpeg'
 import articleHydrogenImage from './articleImages/hydrogen.png'
 
 import novabloom1 from './casestudyImages/novabloom1.png'
-import novabloom2 from './casestudyImages/novabloom2.png'
 
 const nanourl = 'https://vimeo.com/567703280'
 const klinkurl = 'https://vimeo.com/567703881'
@@ -50,22 +52,42 @@ function ShopifyDeveloperPage() {
       <div className='page-body'>
           <Header menu='shopify' />
         <section className="shopify-hero">
+          <div className="bkhero" style={{backgroundImage: "url(" + HeroImage + ")"}}></div>
           <div className='inner-hero'>
             <div className='left-content'>
-              <h1>Unlock More Sales With Next-gen Shopify Development</h1>
-              <p>Get big agency level quality with personal service.</p>
-              <button onClick={() => scrollToQuiz()} >Start a Project</button>
-            </div>
-            <div className="right-content">
-              <img src={HeroImage} alt="Mockups of Shopify Sites"/>
+              <h1>Unlock More Sales With Next-gen <span>Shopify Development</span></h1>
+              <ul>
+                <li>✅ Custom Apps/Theme Modifications</li>
+                <li>✅ Money-back Guarantee</li>
+                <li>✅ Experts in Shopify Plus</li>
+              </ul>
+              {/* <p>Get big agency level quality with personal service.</p> */}
+              <div>
+                <button onClick={() => scrollToQuiz()} >Request a Quote</button>
+                <button className="livechatBtn" onClick={() => scrollToQuiz()} >Live Chat</button>
+              </div>
+              
             </div>
           </div>
         </section>
+        <section className="below-hero-points">
+          <ul>
+            <li>Business in over 10+ countries</li>
+            <li>All 5 star reviews</li>
+            <li>Satisfaction Guaranteed</li>
+            <li>Reliable Team</li>
+          </ul>
+        </section>
+
         <section className='intro'>
           <div className='intro-vid'>
             <ResponsivePlayer url={intro} />
-            <p>We are experienced in delivering a variety of services including Shopify store setups, Custom Store Design & Development, Customisations, App Integrations as well as ongoing retainer support and E-commerce Rate Optimisation.</p>
           </div>
+        </section>
+        <section className="widths intro-text">
+            <h2 className='intro-h2'>Shopify Web Development</h2>
+            <p className='intro-p'>With over 7+ years of Shopify experience we are an expert team of developers & designers. We specialize only in Shopify and offer a variety of services including Shopify store setups, Custom Store Design & Development, Custom App development, as well as ongoing retainer support and E-commerce Rate Optimization so your site is performing at it’s best.</p>
+              <p className='intro-p'>We’ve dealt in many industries from technology products to fashion, and always deliver great stunning results. We are on time, and within your budget. Our communication is always a top priority so you can always count on us to be trustworthy.</p>
         </section>
         <section className="projects">
           <ProjectExample 
@@ -130,6 +152,7 @@ function ShopifyDeveloperPage() {
           </div>
         </section>
         <TechStackSection />
+        <WhyChooseViews />
         <Testimonials />
         <section ref={ctaQuiz}>
         <img className="dwnarrow" src={downArrow} />
@@ -152,7 +175,7 @@ function ShopifyDeveloperPage() {
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer white={true}/>
       </div>
     </motion.div>
   )

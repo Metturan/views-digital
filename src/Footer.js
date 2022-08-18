@@ -8,6 +8,12 @@ const Footer = (props) => {
           <div className="inner-footer">
             <p className="logotop">
               {props.white ? <img alt="Views Digital" src={logo1} /> : <img alt="Views Digital" src={logo} /> }
+              <ul>
+                <li>Shopify Development</li>
+                <li>Services</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
             </p>
             {/* <img src={gpartner} /> */}
             <p>Copyright © 2022 Viewscom Corp.</p>

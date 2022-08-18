@@ -145,7 +145,7 @@ const Services = () => {
             <section className='widths'>
                 <ContactFormServices />
             </section>
-            <Footer />
+            <Footer white={true} />
             
         </motion.div>
     )

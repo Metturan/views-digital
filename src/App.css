@@ -1,8 +1,8 @@
 .inner-header {
   display:flex;
   justify-content: space-between;
-  max-width: 1220px;
-  width: 95%;
+  /* max-width: 1220px; */
+  width: 90%;
   margin: 0 auto;
   align-items: center;
 }
@@ -113,11 +113,9 @@ footer {
   margin-top:100px;
 }
 
-
-
 footer p {
   margin-bottom: 20px;
-  font-size: unset;
+  font-size: 14px;
 }
 .prosCons p {
   margin-bottom: 10px;
@@ -655,11 +653,25 @@ footer p {
   width: 31%;
   box-sizing: border-box;
   padding: 20px;
-  border:1px solid #000;
+  border:5px solid transparent;
   box-shadow: 0 2px 15px #00000026;
-  margin-bottom: 35px;
   display:flex;
   flex-direction: column;
+  background-clip: padding-box;
+  background: #fff;
+  position:Relative;
+  margin-bottom: 35px;
+  
+}
+.serviceItem:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -8px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(to right, red, purple);;
+  z-index:-1;
 }
 .emailLogos {
   max-width: 800px;
@@ -792,13 +804,14 @@ footer p {
 }
 
 .footHome {
-background:#000;
-color:#fff;
+  max-width: 90%;
+  margin: 100px auto 0 auto;
+  border-top: 2px solid #000;
 }
 
 .inner-footer {
-  width: 95%;
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 .emailContainer label {
@@ -863,9 +876,11 @@ color:#fff;
 }
 
 .logotop img {
-  max-width:150px;
+  max-width:140px;
 }
-
+.footHome .logotop img {
+  max-width: 150px;
+}
 .contactShopify form > div:nth-child(2), .contactShopify form > div:last-child {
   width: 33%;
   display: flex;
@@ -1011,7 +1026,7 @@ color:#fff;
     width: 90%;
   }
   .mobnav > div {
-    background:#000;
+    background:#fff;
   }
   .mobnav.is-active > div {
     background: #fff;
@@ -1019,6 +1034,22 @@ color:#fff;
 }
 
 @media screen and (max-width:600px) {
+  .logotop img {
+    max-width: 120px;
+  }
+  .whychoose-section > img {
+    max-width:200px !important;
+  }
+  .whychoose-section h2 {
+    margin: 55px auto 35px !important;
+    font-size: 27px !important;
+  }
+  .whychoose-section {
+    padding: 60px 0;
+  }
+  .whychoose-section li {
+    font-size: 18px !important;
+  }
   .bcgs {
     max-width: 100%;
     margin-left: 0;
