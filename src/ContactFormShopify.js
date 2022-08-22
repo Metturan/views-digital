@@ -42,6 +42,7 @@ const ContactFormShopify = () => {
                       <option value="Shopify Custom App">Shopify Custom App</option>
                       <option value="Headless Commerce">Shopify Headless Commerce</option>
                       <option value="Shopify Custom Development">Shopify Custom Development</option>
+                      <option value="Shopify Design">Graphic/Theme Custom Design</option>
                     </select>
                     <br/>
                     <label>Key Objectives / Description</label>

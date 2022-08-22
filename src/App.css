@@ -730,13 +730,13 @@ footer p {
   margin-bottom: 8px;
 }
 .dev-services h2 {
-  font-size:37px;
+  font-size:50px;
   font-family: proxima-bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .sectioned h3 {
   font-family: proxima-regular;
-  font-size: 25px;
+  font-size: 33px;
   font-weight: bold;
 }
 .sectioned > div:first-child {
@@ -884,7 +884,7 @@ footer p {
 .contact-container.contactShopify .normInp {
   color:#fff;
   margin-bottom:20px;
-  background:#000;
+  background:#272727;
   border-bottom:1px solid #afafaf;
 }
 .contact-container.contactShopify {
@@ -900,7 +900,7 @@ footer p {
     font-size: 18px;
     outline: none;
     color:#fff;
-    background:#000;
+    background:#272727;
     appearance: auto;
     border: none;
     border-bottom: 1px solid #afafaf;
@@ -941,7 +941,7 @@ footer p {
   resize: none;
   height: 103px;
   border: 1px solid #afafaf;
-  background: transparent;
+  background: #272727;
   margin-top: 8px;
   color: #fff;
   font-family: 'proxima-regular';

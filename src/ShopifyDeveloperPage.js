@@ -64,7 +64,7 @@ function ShopifyDeveloperPage() {
             <div className='left-content'>
               <h1>Unlock More Sales With Next Gen <span>Shopify Development</span></h1>
               <ul>
-                <li>Views Digital is a strategic partner for growing Shopify stores that require beautiful design and top tiered development.</li>
+                <li>Views Digital is a strategic partner for growing Shopify stores that require beautiful design and top tier development.</li>
               </ul>
               {/* <p>Get big agency level quality with personal service.</p> */}
               <div>
@@ -137,6 +137,7 @@ function ShopifyDeveloperPage() {
         <section ref={ctaQuiz}>
         <img className="dwnarrow" src={downArrow} />
             <h3 className="letstalk">Let's Talk</h3>
+            <p className="letstalkSibling">Welcome to Views Digital. Ready to start your first project?</p>
             <div className="quiz-section quizShopify">
             <div>
                 <ContactFormShopify />

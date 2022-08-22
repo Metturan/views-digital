@@ -753,8 +753,8 @@
   .intro-h2 {
     text-align: left;
     margin-top: 40px;
-    font-family: 'proxima-regular';
-    font-size: 37px;
+    font-family: 'proxima-bold';
+    font-size: 50px;
     font-weight:bold;
   }
   .featured-example {
@@ -854,9 +854,13 @@
   .letstalk {
     text-align: center;
     font-family: 'proxima-bold';
-    font-size: 35px;
+    font-size: 61px;
   }
-
+  .letstalkSibling {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+  }
   .quizShopify {
     margin-top: 30px;
   }
@@ -1360,13 +1364,16 @@
     display:flex;
     flex-wrap:wrap;
   }
+  .testies-container {
+    flex-direction:column;
+  }
   .process > div {
     width: calc(32% - 30px);
     padding: 20px;
     box-sizing: border-box;
     margin: 15px;
-    background:#f6f6f6;
-    border-bottom:1px solid #000;
+    background:#e6eded;
+    border-bottom:1px solid #042825;
   }
   .process img {
     width: 55px;
@@ -1466,6 +1473,17 @@
   }
   .testies-last {
     display:block !important;
+    width:100%;
+  }
+  .testies-last ul {
+    display: flex;
+    flex-wrap:wrap;
+    margin-top:46px;
+    justify-content: space-between;
+    
+  }
+  .testies-last li {
+    width: 31%;
   }
   
   /* Responsive */
