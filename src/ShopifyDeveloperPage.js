@@ -1,16 +1,25 @@
 import {useRef, useEffect} from 'react'
 import { hotjar } from 'react-hotjar';
 import ResponsivePlayer from './ResponsivePlayer'
-import ArticleSnippet from './ArticleSnippet'
 import Footer from './Footer'
 import Header from './Header'
 import PricingSection from './Pricing'
 import Testimonials from './Testimonials'
+import DevelopmentServices from './DevelopmentServices';
 import ContactFormShopify from './ContactFormShopify'
 import TechStackSection from './TechStackSection';
+import SixStagesOfBusiness from './SixStagesOfBusiness'
 import WhyChooseViews from './WhyChooseViews'
+import RecentInsights from './RecentInsights';
 import downArrow from './images/downarrow.png'
-import expert from './images/shopify-experts-logo-3.png'
+
+
+import klinkhoff from './images/blue.jpeg'
+import fivetwoseven from './heroimages/527.jpg'
+import court from './heroimages/court.jpg'
+import nova from './heroimages/nova2.jpg'
+import nano from './heroimages/nano.png'
+import crem from'./heroimages/crem.jpg'
 
 import {motion} from 'framer-motion';
 
@@ -18,9 +27,7 @@ import './Shopify.css'
 
 import ProjectExample from './ProjectExample'
 import HeroImage from './images/shopifysites.png'
-import articleSnippetImg from './articleImages/codemongo.png'
-import articleFeaturedImage from './articleImages/shopify-article-banenr.jpeg'
-import articleHydrogenImage from './articleImages/hydrogen.png'
+
 
 import novabloom1 from './casestudyImages/novabloom1.png'
 
@@ -55,29 +62,40 @@ function ShopifyDeveloperPage() {
           <div className="bkhero" style={{backgroundImage: "url(" + HeroImage + ")"}}></div>
           <div className='inner-hero'>
             <div className='left-content'>
-              <h1>Unlock More Sales With Next-gen <span>Shopify Development</span></h1>
+              <h1>Unlock More Sales With Next Gen <span>Shopify Development</span></h1>
               <ul>
-                <li>✅ Custom Apps/Theme Modifications</li>
-                <li>✅ Money-back Guarantee</li>
-                <li>✅ Experts in Shopify Plus</li>
+                <li>Views Digital is a strategic partner for growing Shopify stores that require beautiful design and top tiered development.</li>
               </ul>
               {/* <p>Get big agency level quality with personal service.</p> */}
               <div>
                 <button onClick={() => scrollToQuiz()} >Request a Quote</button>
-                <button className="livechatBtn" onClick={() => scrollToQuiz()} >Live Chat</button>
+                {/* <button className="livechatBtn" onClick={() => scrollToQuiz()} >Live Chat</button> */}
               </div>
+            
               
             </div>
           </div>
-        </section>
-        <section className="below-hero-points">
+          <div className="portpics">
+                <ul>
+                <li style={{'backgroundColor':'#fff'}}><img src={nano} /></li>
+                  <li><img src={klinkhoff} /></li>
+                  <li><img src={nova} /></li>
+                  <li><img src={court} /></li>
+                  <li><img src={fivetwoseven} /></li>
+                  <li><img src={crem} /></li>
+                  
+                </ul>
+              </div>
+              <section className="below-hero-points">
           <ul>
-            <li>Business in over 10+ countries</li>
-            <li>All 5 star reviews</li>
+            <li>Clients in over 10+ countries</li>
+            <li>All 5 star reviews ⭐⭐⭐⭐⭐</li>
             <li>Satisfaction Guaranteed</li>
             <li>Reliable Team</li>
           </ul>
         </section>
+        </section>
+
 
         <section className='intro'>
           <div className='intro-vid'>
@@ -108,48 +126,10 @@ function ShopifyDeveloperPage() {
             title='Nanoleaf' 
             desc='E-commerce, Shopify Headless CMS.' />
         </section>
+        <DevelopmentServices />
+        <SixStagesOfBusiness />
         <section>
           <PricingSection />
-        </section>
-        <section className="featured-example">
-          <div className="introduction articles-recent">
-            <div>
-                <span className="arrows">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path d="M2.24491 24L13 11.9966L2.24491 -4.7012e-07L-1.09223e-07 2.49874L8.5162 11.9966L-9.3985e-07 21.5013L2.24491 24Z" fill="#FF4700"/><path d="M14.2449 -4.7012e-07L12 2.50476L20.5102 12.0067L12 21.502L14.2449 24L25 12.0067L14.2449 -4.7012e-07Z" fill="#FF4700"/></svg>
-                </span>
-                <span>Recent Articles</span>
-            </div>
-            <div>
-                <ArticleSnippet 
-                    tags={['Headless Commerce', 'Development']} 
-                    date="July 5, 2022" 
-                    title="Is a headless setup the right choice?" 
-                    path="/blog/headless-right-choice"
-                    img={articleHydrogenImage}
-                    desc="Shopify recently announced Hydrogen+Oxygen a react framework for creating custom storefronts but is it for everyone?" 
-                />
-                <br/>
-                <br/>
-                <ArticleSnippet 
-                    tags={['Custom App', 'Development']} 
-                    date="June 28, 2022" 
-                    title="Webhooks for Custom Apps" 
-                    path="/blog/shopify-webhook"
-                    img={articleSnippetImg}
-                    desc="Shopify allows for background jobs in your store. Some of these jobs can be for listening for a certain collection to update. We also touch on the importance of offline + online tokens and why they're both needed." 
-                />
-                <br/>
-                <br />
-                <ArticleSnippet 
-                    tags={['Shopify 2.0', 'Development']} 
-                    date="July 13, 2021" 
-                    path="/blog/shopify-20"
-                    title="Shopify 2.0 - Should Small Business Owners Care?" 
-                    img={articleFeaturedImage}
-                    desc="Shopify introduces store 2.0 and the company is going in a clear decision towards making editing content and managing products easier. And this is all good for the end user to make Shopify more accessible and friendly." 
-                />
-            </div>
-          </div>
         </section>
         <TechStackSection />
         <WhyChooseViews />
@@ -175,6 +155,7 @@ function ShopifyDeveloperPage() {
             </div>
           </div>
         </section>
+        <RecentInsights />
         <Footer white={true}/>
       </div>
     </motion.div>

@@ -29,9 +29,15 @@ function Klinkhoff() {
     >
     <Header menu="shopify"/>
     <div className='case-study-page'>
-      <section className="hero klink">
+      {/* <section className="hero klink">
         <h1>Klinkhoff Art Gallery</h1>
-      </section>
+      </section> */}
+      <section className='hero-half'>
+        <div className="inner-hero">
+            <h1>Klinkhoff Art Gallery</h1>
+            <p>Requested to build a custom theme with a new design to highlight their decades of history in the art world.</p>
+        </div>
+    </section>
       <div className="intro-featured">
           <h2>An art gallery that is in the business of collecting valuable artworks from across the globe. Take a look below to see some of the features we built for this shopify site.</h2>
         </div>
@@ -52,12 +58,11 @@ function Klinkhoff() {
           <ResponsivePlayer url={videosUrl.klink4} />
           <p>Follow Interests and Artists - To enhance their email marketing capacities and increase engagement we created custom functionlity that allows logged in users to save artists and interests to their profile. The result is information that can then be marketed to through specific email campaigns.</p>
         </div>
-        <div className="featured border-bottom">
+        <div className="featured">
           <ResponsivePlayer url={videosUrl.klink5} />
           <p>Follow Interests and Artists - To enhance their email marketing capacities and increase engagement we created custom functionlity that allows logged in users to save artists and interests to their profile. The result is information that can then be marketed to through specific email campaigns.</p>
         </div>
-        {/* <h2 className='cta-title'>Let's talk about your project</h2> */}
-        <QuizContainerContent title="Let's talk about your project" />
+
       </section>
       <Footer />
     </div>

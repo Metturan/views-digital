@@ -112,9 +112,10 @@ footer {
   border-top:1px solid rgba(0,0,0,0.23);
   margin-top:100px;
 }
-
+.footHome .logotop {
+  margin-bottom: 45px;
+}
 footer p {
-  margin-bottom: 20px;
   font-size: 14px;
 }
 .prosCons p {
@@ -691,11 +692,58 @@ footer p {
 .intro-services h2 {
   margin-bottom: 15px;
 }
+.topserviced {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.topserviced > div {
+  box-sizing: border-box;
+}
+.topserviced > div:nth-child(odd) {
+  padding-right:65px;
+  border-right: 1px solid #ddd;
+}
+.topserviced > div:nth-child(even) {
+  padding-left:65px;
+}
+.sectioned {
+  width: 50%;
+  padding-bottom: 40px;
+}
+.sectioned p {
+  margin-bottom: 10px;
+}
+.dev-services {
+  margin: 90px auto 50px auto;
+}
+.dev-services > p {
+  max-width: 600px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(116, 116, 116);
+}
 .serviceItem h3 {
   font-size: 20px;
   line-height: 1.2;
   font-family: 'proxima-bold';
   margin-bottom: 8px;
+}
+.dev-services h2 {
+  font-size:37px;
+  font-family: proxima-bold;
+  margin-bottom: 10px;
+}
+.sectioned h3 {
+  font-family: proxima-regular;
+  font-size: 25px;
+  font-weight: bold;
+}
+.sectioned > div:first-child {
+  margin: 20px 0;
+}
+.sectioned > div:last-child {
+  margin: 20px 0;
 }
 .service-spacing {
   margin-top: 50px;
@@ -806,7 +854,7 @@ footer p {
 .footHome {
   max-width: 90%;
   margin: 100px auto 0 auto;
-  border-top: 2px solid #000;
+  border-top: 1px solid #000;
 }
 
 .inner-footer {
