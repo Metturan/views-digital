@@ -881,14 +881,83 @@ footer p {
   background:#000;
   color:#fff;
 }
+.fixed-msg {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 353px;
+  height: 130px;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border: 3px solid #042825;
+  background: #e6eded;
+  z-index: 99;
+  transition: all 0.25s ease;
+}
+.first-part-sidebar label, .first-part-sidebar input {
+  display:block;
+}
+.fixed-msg.open {
+  height: calc(100vh - 40px);
+  background:#fff;
+  width:600px;
+}
+.fixed-msg.open .fixed-intro {
+  opacity: 0;
+  visibility:hidden;
+  display: none;
+}
+.fixed-msg h3 {
+  line-height: 1.3;
+}
+.first-part-sidebar {
+  visibility:hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.first-part-sidebar.show {
+  visibility:visible;
+  opacity: 1;
+}
+.closeX svg {
+  transform: scale(0.7);
+    margin-left: 6px;
+}
+.closeX {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  margin: 0 0 0 auto;
+  background: white;
+  border: none;
+  font-size:16px;
+}
+.closeX.show {
+  opacity:1;
+  visibility:visible;
+  display: flex;
+}
+.fixed-msg .openBtn {
+  margin: 10px 0 0 auto;
+  display: block;
+  border: none;
+  border-radius: 30px;
+  background: #042825;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 16px;
+  transition: all 0.25s ease;
+}
 .contact-container.contactShopify .normInp {
   color:#fff;
   margin-bottom:20px;
-  background:#272727;
+  background:#e6eded;
   border-bottom:1px solid #afafaf;
 }
 .contact-container.contactShopify {
-  background:#000;
+  background:#042825;
   color:#fff;
   padding-top:0;
 }
@@ -897,10 +966,12 @@ footer p {
 }
 .normInp {
   padding: 10px;
+  box-sizing: border-box;
     font-size: 18px;
     outline: none;
-    color:#fff;
-    background:#272727;
+    width:100%;
+    color:#000;
+    /* background:#272727; */
     appearance: auto;
     border: none;
     border-bottom: 1px solid #afafaf;

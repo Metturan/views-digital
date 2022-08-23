@@ -16,6 +16,7 @@ const ContactFormShopify = () => {
           console.log(error.text);
       });
   };
+  
     return (
         <>
             <div className="contact-container contactShopify">
@@ -45,7 +46,7 @@ const ContactFormShopify = () => {
                       <option value="Shopify Design">Graphic/Theme Custom Design</option>
                     </select>
                     <br/>
-                    <label>Key Objectives / Description</label>
+                    <label>Tell Us About Your Project</label>
                     <textarea name="message" placeholder='Enter as much details as possible' />
                     <input className="specialBk" type="submit" value="Send" />
                   </div>

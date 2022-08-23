@@ -853,13 +853,29 @@
   }
   .letstalk {
     text-align: center;
-    font-family: 'proxima-bold';
-    font-size: 61px;
+    font-family: 'proxima-regular';
+    font-size: 72px;
+    line-height: 1.2;
   }
   .letstalkSibling {
     text-align: center;
     font-size: 25px;
     margin-top: 10px;
+  }
+  #footerStartProject {
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+    background: #042825;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 34px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    /* letter-spacing: 1px; */
+    margin-bottom: 100px;
   }
   .quizShopify {
     margin-top: 30px;
@@ -1279,8 +1295,10 @@
   }
 
   .testy-desc p {
-      font-size:19px;
+      font-size:22px;
       margin-bottom: 10px;
+      font-weight:bold;
+      color:rgb(116,116,116);
   }
 
   .testy-desc .client {
@@ -1351,7 +1369,7 @@
   }
   
   .articlesnippet {
-    box-shadow: 0px 0px 20px 0px #c0c0c0;
+    box-shadow: 0px 0px 20px 0px #e4e4e4;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -1366,6 +1384,8 @@
   }
   .testies-container {
     flex-direction:column;
+    margin-top:150px;
+    margin-bottom:100px;
   }
   .process > div {
     width: calc(32% - 30px);
@@ -1473,7 +1493,7 @@
   }
   .testies-last {
     display:block !important;
-    width:100%;
+    width:100% !important;
   }
   .testies-last ul {
     display: flex;
@@ -1483,7 +1503,7 @@
     
   }
   .testies-last li {
-    width: 31%;
+    width: 30%;
   }
   
   /* Responsive */

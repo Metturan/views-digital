@@ -8,7 +8,6 @@ import Privacy from './Privacy'
 import Terms from './Terms'
 import Contact from './Contact'
 import Article from './article/Article'
-import PricingConfig from './PricingConfig';
 import ArticleHeadlessRightChoice from './article/ArticleHeadlessRightChoice'
 import ArticleWebhook from './article/ArticleWebhook'
 import Klinkhoff from './Klinkhoff'
