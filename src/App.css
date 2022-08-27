@@ -352,6 +352,7 @@ footer p {
   width: 95%;
   max-width: 1120px;
   margin: 0 auto;
+  padding-top:60px;
 }
 
 .earnings-section p {
@@ -456,6 +457,9 @@ footer p {
 #react-maxW {
   max-width: 82px;
 }
+#ruby-maxW {
+  max-width: 66px;
+}
 .varyBlack {
   background:#000;
   color:#fff;
@@ -475,8 +479,7 @@ footer p {
 }
 .hero-half p {
   max-width:650px;
-  font-weight: bold;
-  font-size: 27px;
+  font-size: 25px;
 }
 .introduction > div:first-child {
   display:flex;
@@ -506,8 +509,9 @@ footer p {
     padding-bottom: 80px;
 }
 .hero-half {
-  background: linear-gradient(90deg, #7ce0ff 16%, #87e2e2 26%, #a4e997 48%, #d0f224 79%);
+  background: #042825;
     padding-top: 150px;
+    color:#fff;
     padding-bottom: 80px;
 }
 .sectioned-split {
@@ -886,9 +890,9 @@ footer p {
   bottom: 20px;
   right: 10px;
   width: 353px;
-  height: 130px;
+  height: 135px;
   box-sizing: border-box;
-  padding: 20px 20px;
+  padding: 20px 30px;
   border: 3px solid #042825;
   background: #e6eded;
   z-index: 99;
@@ -913,11 +917,13 @@ footer p {
 .first-part-sidebar {
   visibility:hidden;
   opacity: 0;
+  display:none;
   transition: all 0.2s ease;
 }
 .first-part-sidebar.show {
   visibility:visible;
   opacity: 1;
+  display:block;
 }
 .closeX svg {
   transform: scale(0.7);
@@ -929,6 +935,7 @@ footer p {
   visibility: hidden;
   align-items: center;
   margin: 0 0 0 auto;
+  cursor:pointer;
   background: white;
   border: none;
   font-size:16px;
@@ -941,13 +948,14 @@ footer p {
 .fixed-msg .openBtn {
   margin: 10px 0 0 auto;
   display: block;
+  cursor:pointer;
   border: none;
   border-radius: 30px;
   background: #042825;
   color: #fff;
   font-size: 15px;
   font-weight: bold;
-  padding: 5px 16px;
+  padding: 6px 16px;
   transition: all 0.25s ease;
 }
 .contact-container.contactShopify .normInp {
@@ -965,18 +973,129 @@ footer p {
   border: 1px solid #afafaf;
 }
 .normInp {
-  padding: 10px;
+  padding: 15px 10px;
   box-sizing: border-box;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
     width:100%;
     color:#000;
-    /* background:#272727; */
+    margin-top:10px;
+    background:#fff;
     appearance: auto;
-    border: none;
-    border-bottom: 1px solid #afafaf;
+    border: 1px solid #000;
+    border-radius:5px;
+    
 }
-
+.secondstep-back.show {
+  visibility:visible;
+  opacity:1;
+}
+.secondstep-back {
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  cursor:pointer;
+  bottom: 30px;
+  left: 30px;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-family: 'proxima-bold';
+  letter-spacing: 1px;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  transition: all 0s ease;
+}
+.submitstep-btn {
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+    bottom: 30px;
+    cursor:pointer;
+    right: 30px;
+    padding: 9px 39px;
+    font-size: 18px;
+    font-family: 'proxima-bold';
+    transition: all 0s ease;
+}
+.submitstep-btn.show {
+  visibility:visible;
+  opacity:1;
+}
+.firststep-next {
+  visibility:hidden;
+  cursor:pointer;
+  opacity:0;
+    /* margin: auto auto 0 0; */
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-family: 'proxima-bold';
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    /* transition: all 0.2s ease; */
+}
+.second-part-sidebar {
+  display:none;
+}
+.second-part-sidebar.show {
+  display:block;
+}
+.second-part-sidebar > div {
+  display:flex;
+  justify-content: space-between;
+}
+.second-part-sidebar > div > div {
+  width: 47%;
+}
+.second-part-sidebar label {
+  font-size: 22px;
+  font-family: 'proxima-regular';
+  font-weight: bold;
+  display:block;
+}
+.firststep-next.show {
+  display:block;
+  opacity:1;
+  visibility:visible;
+}
+.first-part-sidebar h3 {
+  font-size: 50px;
+    margin-top: 20px;
+    font-family: 'proxima-bold';
+}
+.second-part-sidebar h3 {
+  font-size: 38px;
+    margin-top: 20px;
+    font-family: 'proxima-bold';
+}
+.second-part-sidebar > p {
+  margin-bottom: 35px;
+}
+.first-part-sidebar > p {
+  font-size:18px;
+  margin-bottom:35px;
+}
+.fixed-msg textarea {
+  width: 100%;
+    min-height: 130px;
+    font-size:16px;
+    font-family:proxima-regular;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border:1px solid #000;
+    border-radius:5px;
+}
+.first-part-sidebar label {
+  font-size: 22px;
+    font-family: 'proxima-regular';
+    font-weight: bold;
+}
 .contactShopify form {
   display: flex;
   flex-direction: row;
@@ -1153,6 +1272,53 @@ footer p {
 }
 
 @media screen and (max-width:600px) {
+  .hidebr {
+    display:none;
+  }
+  .fixed-msg.open {
+    width: 100%;
+    height:calc(100vh - 64px);
+  }
+  .second-part-sidebar label {
+    font-size:19px;
+  }
+  .second-part-sidebar h3 {
+    margin-top:10px;
+    font-size:23px;
+  }
+  .first-part-sidebar > p {
+    font-size:17px;
+    margin-bottom:30px;
+  }
+  .fixed-msg textarea {
+    min-height:100px;
+  }
+  .first-part-sidebar label {
+    font-size:19px;
+  }
+  .first-part-sidebar h3 {
+    margin-top:0;
+    font-size:30px;
+  }
+  .normInp {
+    padding:10px 10px;
+  }
+  .fixed-msg {
+    left:0;
+    right:0;
+    height:120px;
+    padding:16px 35px;
+    bottom:0;
+    width: 100%;
+    border:unset;
+    border-top:3px solid #042825;
+  }
+  #ruby-maxW {
+    max-width: 49px;
+  }
+  #react-maxW {
+    max-width: 70px;
+  }
   .logotop img {
     max-width: 120px;
   }

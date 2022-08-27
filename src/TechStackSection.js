@@ -19,6 +19,8 @@ import logo18 from './images/logos/BrightPearl_180x.png'
 import logo19 from './images/logos/hotjar_540x.png'
 import logo20 from './images/logos/octane_200x.png'
 
+import ruby from './images/ruby.png'
+
 const TechStackSection = () => {
     return (
         <>
@@ -39,7 +41,7 @@ const TechStackSection = () => {
                         <span><img src={logo7} /></span>
                         <span><img src={logo8} /></span>
                         <span><img src={logo9} /></span>
-                        <span><img src={logo10} /></span>
+                        <span><img id="ruby-maxW" src={ruby} /></span>
                         <span><img src={logo11} /></span>
                         <span><img id="react-maxW" src={logo12} /></span>
                         <span><img src={logo13} /></span>

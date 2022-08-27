@@ -457,7 +457,7 @@ margin-bottom: 75px;
 
 .mobnav > div {
   width: 28px;
-  height: 3px;
+  height: 2px;
   background: #fff;
   border-radius: 10px;
   display: block;
@@ -470,17 +470,20 @@ margin-bottom: 75px;
 .mobnav {
   padding: 10px;
 }
+.mobile-menu li {
+  line-height:2;
+}
 .mobnav.is-active > div:nth-child(1){
-  -webkit-transform: translateY(10px) rotate(45deg);
-  -ms-transform: translateY(10px) rotate(45deg);
-  -o-transform: translateY(10px) rotate(45deg);
-  transform: translateY(10px) rotate(45deg);
+  -webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 .mobnav.is-active > div:nth-child(3){
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-  -ms-transform: translateY(-10px) rotate(-45deg);
-  -o-transform: translateY(-10px) rotate(-45deg);
-  transform: translateY(-10px) rotate(-45deg);
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 .outer-mobnav {
   display: none;
@@ -852,16 +855,26 @@ margin-bottom: 75px;
 @media (max-width: 500px) {
   .footHome .logotop {
     flex-direction:column;
+    margin-bottom:10px;
   } 
   .footHome .logotop ul {
     width:unset;
     margin: 25px 0;
+    line-height:1.6;
     flex-direction: column;
+    text-align: center;
+  }
+  footer p {
+    margin-bottom:10px;
     text-align: center;
   }
   .regulation-links {
     display:flex;
     flex-direction: column;
     text-align: center;
+  }
+  .regulation-links a {
+    font-size:16px;
+    margin-bottom:10px;
   }
 }

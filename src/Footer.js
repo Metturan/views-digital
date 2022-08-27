@@ -6,7 +6,7 @@ const Footer = (props) => {
     return (
         <footer className="footHome">
           <div className="inner-footer">
-            <p className="logotop">
+            <div className="logotop">
               {props.white ? <img alt="Views Digital" src={logo1} /> : <img alt="Views Digital" src={logo} /> }
               <ul>
                 <li>Shopify Development</li>
@@ -14,7 +14,7 @@ const Footer = (props) => {
                 <li>About</li>
                 <li>Contact</li>
               </ul>
-            </p>
+            </div>
             {/* <img src={gpartner} /> */}
             <p>Copyright © 2022 Viewscom Corp.</p>
             <p>Registered office address: 2967 Dundas St. W. #88, Toronto, ON M6P 1Z2. </p>

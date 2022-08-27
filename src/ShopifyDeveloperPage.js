@@ -42,7 +42,10 @@ function ShopifyDeveloperPage() {
   useEffect(() => {
     hotjar.initialize(3083253,6);
   }, [])
+
   const ctaQuiz = useRef();
+  const startProjectBtn = useRef();
+  const landingProjectBtn = useRef();
 
   function scrollToQuiz() {
     ctaQuiz.current.scrollIntoView({behavior: "smooth", block: "start"} );
@@ -69,32 +72,29 @@ function ShopifyDeveloperPage() {
               </ul>
               {/* <p>Get big agency level quality with personal service.</p> */}
               <div>
-                <button onClick={() => scrollToQuiz()} >Start a Project</button>
+                <button ref={landingProjectBtn} >Start a Project</button>
                 {/* <button className="livechatBtn" onClick={() => scrollToQuiz()} >Live Chat</button> */}
               </div>
-            
-              
             </div>
           </div>
           <div className="portpics">
-                <ul>
-                <li style={{'backgroundColor':'#fff'}}><img src={nano} /></li>
-                  <li><img src={klinkhoff} /></li>
-                  <li><img src={nova} /></li>
-                  <li><img src={court} /></li>
-                  <li><img src={fivetwoseven} /></li>
-                  <li><img src={crem} /></li>
-                  
-                </ul>
-              </div>
-              <section className="below-hero-points">
-          <ul>
-            <li>Clients in over 10+ countries</li>
-            <li>All 5 star reviews ⭐⭐⭐⭐⭐</li>
-            <li>Satisfaction Guaranteed</li>
-            <li>Reliable Team</li>
-          </ul>
-        </section>
+            <ul>
+            <li style={{'backgroundColor':'#fff'}}><img src={nano} /></li>
+              <li><img src={klinkhoff} /></li>
+              <li><img src={nova} /></li>
+              <li><img src={court} /></li>
+              <li><img src={fivetwoseven} /></li>
+              <li><img src={crem} /></li>
+            </ul>
+          </div>
+          <section className="below-hero-points">
+            <ul>
+              <li>Clients in over 10+ countries</li>
+              <li>All 5 star reviews ⭐⭐⭐⭐⭐</li>
+              <li>Satisfaction Guaranteed</li>
+              <li>Reliable Team</li>
+            </ul>
+          </section>
         </section>
 
 
@@ -139,7 +139,7 @@ function ShopifyDeveloperPage() {
         <section ref={ctaQuiz}>
         <img className="dwnarrow" src={downArrow} />
             <h3 className="letstalk">Have a project in mind?<br/> Let’s get to work.</h3>
-            <button id="footerStartProject">Start a Project</button>
+            <button ref={startProjectBtn} id="footerStartProject">Start a Project</button>
             {/* <p className="letstalkSibling">Welcome to Views Digital. Ready to start your first project?</p> */}
             {/* <div className="quiz-section quizShopify">
               <div>
@@ -161,7 +161,7 @@ function ShopifyDeveloperPage() {
         </section>
       
         <Footer white={true}/>
-        <SidebarStartProject />
+        <SidebarStartProject landerButton={landingProjectBtn} footerButton={startProjectBtn} />
       </div>
     </motion.div>
   )

@@ -955,7 +955,7 @@
   .portpics li {
     flex-shrink:0;
     margin-right:30px;
-    width:300px;
+    width:17vw;
   }
   .shopify-hero {
    background: #042825;
@@ -986,7 +986,7 @@
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
-    font-size:15px;
+    font-size:16px;
     margin: 0 30px;
   }
 
@@ -1724,13 +1724,96 @@
   }
   
   @media (max-width: 500px) {
-
+    
+    .price-item h3 {
+      font-size: 20px;
+    }
+    .left-content h1 {
+      font-size:29px;
+    }
+    .portpics {
+      margin-top:0;
+    }
+    .left-content li {
+      font-size:19px;
+    }
+    .below-hero-points li {
+      margin: 0px 10px;
+    }
+    .portpics li {
+      min-width:100px;
+      margin-right:10px;
+    }
+    .shopify-hero {
+      padding-top:70px;
+    }
     .intro-p {
       font-size:18px;
       margin: 30px 0;
     }
     .intro-h2 {
+      font-size: 24px;
+    }
+    .projectInfo h2 {
+      font-size: 21px;
+    }
+    .dev-services h2 {
       font-size: 27px;
+    }
+    .dev-services > p {
+      font-size: 18px;
+    }
+    .topserviced {
+      flex-direction:column;
+    }
+    .topserviced > div:nth-child(odd) {
+      border-right: unset;
+      padding-right: unset;
+    }
+    .process {
+      flex-direction: column;
+    }
+    .testies-last ul {
+      flex-direction: column;
+    }
+    .testies-last li {
+      width:100%;
+    }
+    .processes {
+      padding-bottom: 0px;
+    }
+    .whychoose-section {
+      margin-bottom:0;
+    }
+    .testies-container {
+      margin-top:50px;
+      margin-bottom:30px;
+    }
+    .letstalk {
+      font-size:31px;
+    }
+    .process > div {
+      width:100%;
+      margin: 0 0 20px 0;
+    }
+    .sectioned {
+      width:100%;
+    }
+    .sectioned h3 {
+      font-size:24px;
+    }
+    .intro-process {
+      text-align: left;
+    }
+    .intro-process h2 {
+      font-size: 24px;
+    }
+    .intro-process > p {
+      font-size: 19px;
+      text-align: left;
+    }
+    .topserviced > div:nth-child(even) {
+      padding-left:unset;
     }
     .introduction > div:first-child > span:last-child {
       white-space:nowrap;
