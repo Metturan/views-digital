@@ -12,11 +12,10 @@ const Menulist = (props) => {
     if (props.menu == 'shopify') {
         return (
             <>
-                <li><Link to="/shopify">Shopify Development</Link></li>
-                {/* <li><Link to="/shopify/email-marketing">Email Marketing</Link></li> */}
-                <li><Link to="/shopify/about">About</Link></li>
-                <li><Link to="/shopify/services">Services</Link></li>
-                <li><Link className="outline" to="/shopify/contact" >Get in Touch</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/faq">FAQ</Link></li>
+                <li><Link className="outline" to="/contact" >Get a Free Quote</Link></li>
             </>
         )
     }

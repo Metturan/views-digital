@@ -16,7 +16,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_bp6li5j', 'template_fkhvqxw', form.current, 'user_OJdLjW4coK6cy7d5ELFzC')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -32,44 +32,62 @@ const Contact = () => {
       transition={transition}
       >
             <Header menu="shopify"/>
-            <section className='hero-half'>
-                <div className="inner-hero">
-                    <h1>Contact Us</h1>
-                    <p>Can we help? Please leave us a message and we will respond within 24 hours.</p>
-                </div>
-            </section>
+
             <div className="contact-container">
               <div>
-                <p style={{'textAlign':'center'}}>We look forward to chatting.</p>
+                    <h1>Get a Free Quote</h1>
+                    <p>Get in touch with me and I'll provide you with a free quote. Fill out the form and let me know what you'd like assistance with. Whether it's customizing your store, adding new features to your theme, integrating a third-party app. I'd be happy to be a part of your team.</p>
+                    <br/>
+                    <p>To learn more about the next steps, skip on down below.</p>
               </div>
               <div className="emailContainer">
                 <form ref={form} onSubmit={sendEmail}>
-                  <label>Your name</label>
-                  <input className="normInp" type="text" name="user_name" placeholder='Enter your name' />
-                  <br/>
-                  <label>Your email</label>
-                  <input className="normInp" type="email" name="user_email" placeholder='Enter your email address'/>
-                  <br/>
-                  <label>Best contact number</label>
-                  <input className="normInp" type="text" name="user_phone" placeholder='Enter your phone number'/>
-                  <br/>
-                  <label>Website</label>
-                  <input className="normInp" type="text" name="user_website" placeholder='Enter your website address'/>
-                  <br/>
-                  <label>Services</label>
-                  <select className="normInp" name="user_services">
-                    <option value="Shopify Custom App">Shopify Custom App</option>
-                    <option value="Headless Commerce">Shopify Headless Commerce</option>
-                    <option value="Shopify Custom Development">Shopify Custom Development</option>
-                    <option value="Lead Generation Configurator">Lead Configurator Install</option>
-                  </select>
-                  <br/>
+                  <div className='formgroup'>
+                    <div>
+                      <label>Your name</label>
+                      <input className="normInp" type="text" name="user_name" placeholder='Enter your name' />
+                    </div>
+                    <div>
+                      <label>Your email</label>
+                      <input className="normInp" type="email" name="user_email" placeholder='Enter your email address'/>
+                    </div>
+                  </div>
+                  
+
+                  <div className="formgroup">
+                    <div>
+                      <label>Store URL</label>
+                      <input className="normInp" type="text" name="user_website" placeholder='For ex. store.myshopify.com'/>
+                    </div>
+                    <div>
+                    
+                      <label>How did you hear about me? <span>(optional)</span></label>
+                      <select className="normInp" name="hear_about_us">
+                        <option value="Shopify Custom App">Select...</option>
+                        <option value="Shopify Custom App">Search Engine</option>
+                        <option value="Headless Commerce">Social Media</option>
+                        <option value="Shopify Custom Development">Facebook</option>
+                        <option value="Shopify Design">LinkedIn</option>
+                        <option value="Shopify Design">Recommended by friend or colleague</option>
+                      </select>
+                    </div>
+                  </div>
+         
                   <label>Key Objectives / Description</label>
                   <textarea name="message" placeholder='Enter as much details as possible'/>
                   <input className="specialBk" type="submit" value="Send" />
                 </form>
               </div>
             </div>
+            <section className="process">
+              <h2>Want to Learn More? Here's The Process.</h2>
+              <p>Once you've completed the form, I generally respond within 1 business day. I may ask you some additional questions or we'll schedule a strategy call with no obligations. Video call's are a good way to build trust and I will have my camera on. </p>
+              <p>On the call, we'll talk about what you're hoping to achieve as well as the goals/intent of you're suggested solutions so I can ensure that it's the best path forward and provide you with potential alternatives to ensure you have all the options available to you.</p>
+              
+              <h2 className="space-above">Commonly Asked Questions</h2>
+              <p>If you want to check out our FAQ, click here. Over the years there are some common questions I have received, I've taken note of them and presented answers for most of your questions.</p>
+            </section>
+
             <section className="footer-custom-contact">
               <Footer white={true} />
             </section>

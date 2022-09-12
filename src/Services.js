@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import ContactFormServices from './ContactFormServices'
 import Footer from './Footer'
 import ServiceItem from './ServiceItem';
+import StartProjectSnippet from './StartProjectSnippet'
 
 const transition = {duration: 1, ease: [0.43, 0.13, 0.23, 0.96]};
 
@@ -41,7 +42,7 @@ const Services = () => {
             </section>
             <section className="widths intro-services">
                 <h2>Clear and affordable pricing for even small businesses.</h2>
-                <p>For projects big and small. Our hourly rate goes from $90 - $125.</p>
+                <p>For projects big and small. My hourly rate goes from $90 - $125 for small tasks.</p>
             </section>
             <ul className="service-cat">
                 <li onClick={clickDev}>Development</li>
@@ -53,13 +54,13 @@ const Services = () => {
                     job="Slide-Out Cart"
                     desc="Customize the functionality of the themes minicart to include what you feel is missing."
                     days="2 days"
-                    price="199"
+                    price="299"
                 />
                 <ServiceItem 
                     job="Customize Product Page"
                     desc="Add more functionality to the product form and content on the page."
                     days="1 day"
-                    price="150"
+                    price="250"
                 />
                 <ServiceItem 
                     job="In Cart Upsell"
@@ -142,9 +143,7 @@ const Services = () => {
                     price="1000"
                 />
             </section>
-            <section className='widths'>
-                <ContactFormServices />
-            </section>
+            <StartProjectSnippet/>
             <Footer white={true} />
             
         </motion.div>

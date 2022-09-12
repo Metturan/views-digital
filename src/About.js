@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import ContactFormShopify from './ContactFormShopify'
 import TechStackSection from './TechStackSection'
 import Footer from './Footer'
-
+import StartProjectSnippet from './StartProjectSnippet'
 
 
 const transition = {duration: 1, ease: [0.43, 0.13, 0.23, 0.96]};
@@ -19,14 +19,14 @@ const About = () => {
         key="shopifydiv"
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        exit={{opacity: 0}}e
+        exit={{opacity: 0}}
         transition={transition}
         >
             <Header menu='shopify'/>
             <section className='hero-half'>
                 <div className="inner-hero">
-                    <h1>About Us</h1>
-                    <p>Learn more about Views Digital and some of the team that could help you achieve your business goals.</p>
+                    <h1>About Me</h1>
+                    <p>Learn more about Views Digital and how we could help you achieve your business goals.</p>
                 </div>
             </section>
             <section className="introduction">
@@ -37,21 +37,13 @@ const About = () => {
                     <span>Introduction</span>
                 </div>
                 <div>
-                    <p>We are a development and email marketing agency that focuses on Shopify.  More and more brands are focusing on Shopify as their eCommerce platform of choice. From small to large size businesses.</p>
+                    <p>I am first and foremost a web developer. I work under my company called Views Digital. I’ve been a developer for more than 7 years now. I’ve worked for digital agencies to start ups working with the latest tech.</p>
                     <br />
-                    <p>On the development side we focus on custom theme modifications and building custom apps for stores. On the marketing side we specialize in email marketing using Klaviyo.</p>
-                    <br/>
-                    <p>Our team consists of committed and talented backend/frontend developers, designers, and copywriters from different parts of the globe but mainly North America.</p>
+                    <p>I started this business two years ago to work specifically with e-commerce store owners On Shopify. I don’t work within any other platforms anymore other than Shopify unless it’s for the purpose of migrating a site from one platform (Woocommerce, SquareSpace, bigCommerce etc.) over to Shopify.</p>
                     <br />
-                    <p>With theme extensions and custom apps you can build a unique experience that works perfectly for your business. No more having to rely on inconsistent apps on the marketplace that slow down your site or don’t work with other plugins. If you are looking for an optimized experience that is perfect for your needs, then we can help you. Our developers are advanced enough to even work with AI and Augmented Reality.</p>
+                    <p>Over the last couple years I’ve done a handful or different jobs. Some of the most popular jobs are theme modifications, store redesign/rebuilds, custom apps, SEO technical check ups, site optimizations, integrating third party api’s, custom plugin/modules, bundled product builders and I’m sure I’m missing some other tasks. </p>
                     <br/>
-                    <p>eCommerce is getting more cut-throat by the week, with mega-brands driving up clicks costs with their massive budgets and building out the functionality of their sites. And it will only get harder as more and more stores are realizing the advantages of selling online.</p>
-                    <br/>
-                    <p>Getting new customers past a point can get harder and harder every month. But selling to them again? Well, that’s damn near free.</p>
-                    <br/>
-                    <p>With email marketing you don’t have to rely on FB or Google accounts. You control the backend. For very little cost you can begin to have repeat purchase over and over again with automation. By increasing the LTV of you customer you can increase your revenue by 65%+.</p>
-                    <br/>
-                    <p>So tell us a little about your brand and maybe we can hop on a call to brainstorm a growth plan for your business together.</p>
+                    <p>So if you are interested in working together to build out your online store. tell us a little about your brand and maybe we can hop on a call to brainstorm a growth plan for your business together.</p>
                 </div>
             </section>
             {/* <div className="widths ownerTitle">
@@ -79,14 +71,12 @@ const About = () => {
                         <span>Team</span>
                     </div>
                     <div>
-                        <p>We have employees around the globe that have worked with us for sometime. From Silicon Valley to India and everyone in between, we have picked up quite the team that’s energized and excited to help accomplish our client’s goals.</p>
+                    <p>I have some partners that I work with from time to time who are senior, vetted and trusted. They are top performers and reliable people I’ve done business with in the past that get results, they include designers + marketers.  While we do occasionally partner up with talent from around the globe it is mainly talent from North America.</p>
                     </div>
                 </section>
             </div>
  <TechStackSection/>
-            <section className='widths'>
-                <ContactFormShopify />
-            </section>
+                <StartProjectSnippet/>
             <Footer white={true} />
             
         </motion.div>

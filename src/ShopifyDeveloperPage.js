@@ -46,6 +46,7 @@ function ShopifyDeveloperPage() {
   const ctaQuiz = useRef();
   const startProjectBtn = useRef();
   const landingProjectBtn = useRef();
+  
 
   function scrollToQuiz() {
     ctaQuiz.current.scrollIntoView({behavior: "smooth", block: "start"} );
@@ -66,7 +67,7 @@ function ShopifyDeveloperPage() {
           <div className="bkhero" style={{backgroundImage: "url(" + HeroImage + ")"}}></div>
           <div className='inner-hero'>
             <div className='left-content'>
-              <h1>Unlock More Sales With Next Gen <span>Shopify Development</span></h1>
+              <h1>Unlock More Sales With Expert <span>Shopify Development</span></h1>
               <ul>
                 <li>Views Digital is a strategic partner for growing Shopify stores that require beautiful design and top tier development.</li>
               </ul>

@@ -1,0 +1,495 @@
+<style type="text/css">
+    .inner-product-box {
+          display: flex;
+      flex-wrap: wrap;
+  	}
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+    .note-field--container {
+        display: flex;
+        flex-direction: column;
+    }
+    .bundle-columns {
+		max-width: 1024px !important;
+        margin: 0 auto;
+      	display:flex;
+    }
+  .product-img-housing {
+  	height: 215px;
+    display:flex;
+    align-items:center;
+  }
+  .product-box {
+    width: 74%;
+  }
+  .product-box > div > div {
+    padding: 0 0.5rem 3rem!important;
+    text-align: center;
+    transition: opacity .2s ease;
+    width: 25%;
+  }
+  .bundle-content {
+  	width: 24%;
+    margin-left: 2%;
+  }
+  .product-item-title {
+  	font-size: 23px;
+    min-height: 110px;
+  }
+  .product-item-link {
+  	color: var(--button-bg-color,#000);
+  }
+  .bundle-page-title {
+  	text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .second-title {
+  	  text-align: center;
+    margin-bottom: 50px;
+  }
+  .hover-nice {
+  	color: var(--button-bg-color,#000);
+    display: inline-block;
+    text-decoration: none;
+  }
+  .hover-nice:after {
+  	content: '';
+    display: block;
+    margin: 3px auto 0;
+    height: 2px;
+    width: 50%;
+    background: var(--button-bg-color,#000);
+    transition: width .5s ease;
+  }
+  .hover-nice:hover:after {
+  	width: 100%;
+  }
+  .variant-price {
+  	margin: 15px 0;
+    font-weight:bold;
+  }
+  .button-add {
+  	padding: 0.6em 2em 0.7em;
+    border: none;
+    transition: all .2s linear;
+    background: var(--button-bg-color,#000);
+    color: var(--button-text-color,#fff);
+  }
+  .quantity-decrease, .quantity-increase {
+  	background: 0 0!important;
+    color: inherit!important;
+    border: none;
+    padding: 0;
+    width: 44px;
+    flex: 1;
+  }
+  .quantity-selector-box {
+  border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+    width: 100%;
+    margin: 1rem auto 0;
+    justify-content: space-between;
+  }
+  .qty-count {
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+  .inner-cart-contents {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+  }
+  option {
+      color: #444;
+    background-color: #fff;
+  }
+  .addbundle {
+  	padding: 15px 0;
+    background: var(--button-bg-color,#000);
+    width: 100%;
+    margin-top: 15px;
+  }
+  .hidden-content-cart {
+  	display:none;
+  }
+  #content-cart {
+  	border: 1px solid #ddd;
+  }
+  .lineItemBundle {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0px 10px;
+    padding: 9px 0;
+  }
+  .lineItemBundle h2 {
+  	font-size: 16px;
+    font-weight: normal;
+  }
+  .lineItemBundle h2, .lineItemBundle p {
+  	margin-bottom: 0;
+  }
+  #content-cart > div:first-child {
+  	border-top: none !important
+  }
+  #content-cart > div {
+  	border-top: 1px solid #ddd !important
+  }
+  .line-row {
+  	display:flex;
+    justify-content:space-between;
+  }
+  .filter-box {
+  	display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    padding: 13.5px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    background-image: url(//cdn.shopify.com/s/files/1/2488/6292/t/2/assets/ico-select.svg?6205732526667152353);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: #fff;
+    color: #333;
+    padding-right: 28px;
+  }
+</style>
+
+<script type="text/javascript">
+const selectedVariants = new Map();
+
+function setAddDisabled(form) {
+    const variantId = form.querySelector('[name="variant"]').value;
+    const sectionId = form.querySelector('[name="section"]').value;
+    const canAdd = window.BundleBuilder.canAddVariant(variantId, sectionId);
+    form.querySelector('[type="submit"]').disabled = !canAdd;
+}
+
+
+/* Change variant price after variant change */
+Array.prototype.forEach.call(
+    document.querySelectorAll('.bundle-builder--add-to-bundle-form select[name="variant"]'),
+    function (select) {
+        select.addEventListener('change', function (e) {
+            const variantId = e.target.value;
+            selectedVariants.set(e.target.id, variantId);
+            const price = e.target.querySelector('option[value="' + variantId + '"]').dataset.price;
+            e.target.parentNode.querySelector('.variant-price').textContent = price;
+
+           const form = e.target.parentElement;
+           setAddDisabled(form);
+        });
+    }
+);
+
+
+function render() {
+    selectedVariants.forEach(function (variantId, selectId) {
+        const select = document.getElementById(selectId);
+        if (select) {
+            select.value = variantId;
+        }
+    });
+    Array.prototype.forEach.call(
+        document.querySelectorAll('.bundle-builder--add-to-bundle-form'),
+        setAddDisabled,
+    );
+}
+  
+
+/* Change variant to what was selected last */
+document.body.addEventListener('bundlebuilder:render', render);
+render()
+
+  var productArray = []
+  var array1 = {{ bundle.content | json}}
+  var array2 = JSON.parse(array1)
+  var items = array2.items
+  
+  if (items.length > 0) {
+     var productContainer = document.getElementById('content-cart')
+     
+     
+  	 for (var i=0; i < items.length; i++) {
+     	var item = items[i].variant
+        
+        if (productArray.find(x => x.id == item.product_id)) {
+           var index = productArray.findIndex(x => x.id == item.product_id);
+          productArray[index].qty++
+        } else {
+           productArray.push({
+        	"price": item.price,
+          	"name": item.name,
+          	"id": item.product_id,
+            "qty": 1
+           })
+        }
+     }
+    
+ 
+    
+     var el = productArray.map(item => {
+    	return `<div class="lineItemBundle">
+  			<h2 style="text-align:left;">${item.name}</h2>
+            <div class="line-row"><p>x${item.qty}</p><p>${item.price}</p></div>
+        </div>`
+      }).join('')
+     
+     productContainer.innerHTML = el
+   }  
+  
+  var productsAvailableJSON = '{{bundle.title}}'
+  var allProducts = Array.from(document.querySelectorAll('.product'));
+  var filter = document.querySelector('.filter-box')
+  var filterOptions = Array.from(document.querySelector('.filter-box').options)
+  var productsContainer = document.querySelector('.inner-product-box')
+  
+  filter.addEventListener('change', function(e) {
+     if (e.target.disabled == true) { return; }
+     localStorage.setItem('filter', e.target.value)
+    filter.value = e.target.value;
+    
+     var productsArray = []
+     allProducts.forEach(prod => {
+     	if (prod.dataset.cat == e.target.value) { productsArray.push(prod) }
+     })
+    console.log(productsArray)
+    productsContainer.innerHTML = "";
+    
+     productsArray.map(prod => {
+     	return productsContainer.appendChild(prod)
+     }).join("")
+  });
+
+  var canSelectVariant = false;
+  var canAdd = false;
+  
+  function readMoreModal(event, element) {
+    event.preventDefault();
+    console.log(element.dataset.index, element.dataset.variantid)
+    window.BundleBuilder.showMoreModal('8020222869772', '0')
+  }
+  
+  
+  
+  
+  function initSetFilter() {
+    if (localStorage.getItem('filter')) {
+    	filter.value = localStorage.getItem('filter')
+        filter.dispatchEvent(new Event('change'));
+    }
+  }
+  
+  initSetFilter();
+  
+</script>
+{% if bundle.published %}
+    <h1 class="bundle-page-title">{{ bundle.title }}</h1>
+    <div class="second-title">{{bundle.description}}</div>
+
+    <section class="bundle-columns">
+      <div class="product-box">
+          <div>
+            <select class="filter-box">
+              <option value="" selected disabled>Filter products</option>
+
+              {%- capture tags -%}
+                {%- for product in bundle.current_section.products -%}
+                  {%- for tag in product.tags -%}
+                    {{tag}}::
+                  {%- endfor -%}
+                {%- endfor -%}
+              {%- endcapture -%}
+             
+         		
+              {% assign tags = tags | strip %}
+              {% assign tags = tags | split:"::" | uniq %}
+       
+              {% for tag in tags %}
+              	{% unless forloop.last == true %}
+                 <option value='{{tag}}'>{{tag}}</option>
+                {% endunless %}
+              {% endfor %}
+             
+
+            </select>
+          </div>
+          <div class="inner-product-box">
+          {% for product in bundle.current_section.products %}
+              <div class="product" data-cat="{% for tag in product.tags %}{{tag}}{% endfor %}">
+                  <div class="product-img-housing">
+                    <img src="{{ product.image.src }}" />
+                  </div>
+                  <h2 class="product-item-title">{{ product.title }}</h2>
+                  {% add_to_bundle_form bundle.current_section %}
+                      {% if product.available_variants.size > 1 %}
+                          <select name="variant" id="select-{{ bundle.current_section.index }}-{{ product.id }}">
+                              {% for variant in product.available_variants %}
+                                  <option value="{{ variant.id }}" data-price={{ variant.price | money }}>
+                                      {{ variant.title }}{% if variant.available_count %} (available: {{ variant.available_count }}){% endif %}
+                                  </option>
+                              {% endfor %}
+                          </select>
+                      {% else %}
+                	
+                          <input type="hidden" name="variant" value="{{ product.available_variants[0].id }}" />
+                          <div class="bundle-product-link"><a onclick="readMoreModal(event, this)" data-index="0" data-variantid="{{product.available_variants[0].id}}" class="product-item-link hover-nice bundle-builder-app--bundle--product--show-more" href="/products/{{product.all_variants[0].product.handle}}">{{'Zutaten & Nährwertangaben' | t}}</a></div>
+                		  {% if product.available_variants[0].available_count %} (available: {{ product.available_variants[0].available_count }}){% endif %}
+                      {% endif %}
+                      <div class="variant-price">{{ product.available_variants[0].price | money }}</div>
+                      <button class="button-add" type="submit">{{'Hinzufügen' | t}}</button>
+                  {% end_add_to_bundle_form %}
+                  {% for variant in product.variants_in_bundle %}
+                    {% change_quantity_form %}
+               
+                        <input type="hidden" name="variant" value="{{ variant.id }}" />
+                        <input type="hidden" name="section" value="{{ bundle.current_section.index }}" />
+                        <div class="quantity-selector-box">
+                            <button type="submit" class="quantity-decrease" name="remove">-</button>
+                             <span class="qty-count"> {{ variant.count }}</span>
+                            <button type="submit" class="quantity-increase" name="add">+</button>
+                        </div>
+
+                    {% end_change_quantity_form %}
+                 {% endfor %}
+              </div>
+          {% endfor %}
+          </div>
+      </div>
+      <div class="bundle-content">
+        {% if bundle.content.items.size == 0 %}
+            <span>Your bundle is empty</span>
+        {% else %}
+            <div class="inner-cart-contents">
+              <div>
+                <span>Bundle price</span>
+                <div style="font-size:1.4em">{{bundle.content.price | money }}</div>
+                <div style="margin-top: 15px;">
+                  <p>You've added {{bundle.content.items.size}} products to your bundle.</p>
+                  {% if bundle.content.items.size < bundle.limit_rules[1].value %}<p><span style="color:Red;">Your bundle must contain at least {{bundle.limit_rules[1].value}} products.</span></p>{% endif %}
+                </div>
+              </div>
+              <div class="items-in-bundle">
+                <div id="content-cart">
+                	
+                </div>
+                {% add_to_cart_form %}
+                      {% if bundle.subscription_type == 'optional' and bundle.subscription_frequencies.size > 0 %}
+                          <label>
+                              <input type="radio" name="subscription-enabled" value="0" />
+                              One-time purchase
+                          </label>
+                          <label>
+                              <input type="radio" name="subscription-enabled" value="1" />
+                              Subscribe
+                          </label>
+                      {% endif %}
+                      {% if bundle.subscription_type == 'required' or bundle.subscription_enabled %}
+                          {% for frequency in bundle.subscription_frequencies %}
+                              <ul>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="subscription-frequency" value="{{ frequency.id }}" />
+                                          {{ frequency.frequency }} {{ frequency.unit }}
+                                      </label>
+                                  </li>
+                              </ul>
+                          {% endfor %}
+                          Email: <input type="email" required name="subscription-email" value="{{ settings.subscription_email }}" />
+                      {% endif %}
+                      <button class="addbundle" type="submit"{% unless bundle.can_add_to_cart %} disabled="disabled"{% endunless %}>
+                          {% if bundle.adding_to_cart %}
+                              Processing...
+                          {% else %}
+                              Add bundle to cart
+                          {% endif %}
+                      </button>
+                  {% end_add_to_cart_form %}
+                    <div class="hidden-content-cart">
+                     {% for item in bundle.content.items %}
+
+                        <div class="__{{item.}}">
+                            <div class="__cart_item_title">{{ item.variant.product.title }}</div>
+                            <div class="__cart_item_price">{{ item.variant.price }}</div>
+                            <div class="remove">
+                                {% unless item.is_required %}
+                                    {% remove_from_bundle_form item %}
+                                        <button type="submit">Remove</button>
+                                    {% end_remove_from_bundle_form %}
+                                {% endunless %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+
+              </div>
+            </div>
+       
+
+            {% if settings.note_enabled %}
+                <div class="note-field--container">
+                    <label>{{ settings.note_label }}{% if settings.note_required %} (required){% endif %}</label>
+                    {% note_field %}{{ settings.note_text }}{% end_note_field %}
+                </div>
+                {% if settings.note_prompt_visible %}
+                    <div class="note-field--error-message">
+                        <p>Note required before adding to cart.</p>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+  
+        {% endif %}
+      </div>
+    </section>
+
+ 
+    {% for item in bundle.content.items %}
+        {% if item.variant.id == product.available_variants[0].id %}
+            <button class="button-add" type="submit">1 {{'Hinzugefügt' | t}}</button>
+        {% else %}
+            <button class="button-add" type="submit">{{'Hinzufügen' | t}}</button>
+        {% endif %}
+    {% endfor %}
+
+
+    {% if bundle.has_next_section %}
+        {% section_switch_form %}
+            <input type="hidden" name="section" value="{{ bundle.current_section.index | plus: 1 }}" />
+            <button type="submit">Next</button>
+        {% end_section_switch_form %}
+    {% endif %}
+
+    {% if bundle.has_prev_section %}
+        {% section_switch_form %}
+            <input type="hidden" name="section" value="{{ bundle.current_section.index | plus: -1 }}" />
+            <button type="submit">Previous</button>
+        {% end_section_switch_form %}
+    {% endif %}
+
+    {% if bundle.errors.size > 0 %}
+        <ul>
+            {% for error in bundle.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+ 
+{% else %}
+    <p>Sorry, this bundle is currently unavailable.</p>
+{% endif %}

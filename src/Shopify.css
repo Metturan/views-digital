@@ -18,7 +18,8 @@
   }
   p, a {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 20px;
+    line-height:1.4;
   }
   
   p {
@@ -876,6 +877,8 @@
     font-weight: bold;
     /* letter-spacing: 1px; */
     margin-bottom: 100px;
+    text-align: center;
+    max-width: 150px;
   }
   .quizShopify {
     margin-top: 30px;
@@ -988,11 +991,6 @@
     -webkit-text-fill-color: transparent;
     font-size:16px;
     margin: 0 30px;
-  }
-
-  p {
-    line-height: 1.4;
-    font-size:19px;
   }
   .right-content {
     display:flex;

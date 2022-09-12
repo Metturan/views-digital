@@ -9,10 +9,10 @@ const Footer = (props) => {
             <div className="logotop">
               {props.white ? <img alt="Views Digital" src={logo1} /> : <img alt="Views Digital" src={logo} /> }
               <ul>
-                <li>Shopify Development</li>
-                <li>Services</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/faq">FAQ</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
             {/* <img src={gpartner} /> */}
