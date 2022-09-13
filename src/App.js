@@ -17,6 +17,7 @@ import CaseNovaBloom from './CaseNovaBloom';
 import About from './About'
 import Services from './Services';
 import ShopifyDeveloperPage from './ShopifyDeveloperPage';
+import Thanks from './Thanks'
 import EmailMarketing from './EmailMarketing';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route element={<Freelance />} path="/" exact />
           <Route element={<ShopifyDeveloperPage />} path="/shopify"  />
           <Route element={<Earnings /> } path="/earnings" />
+          <Route element={<Thanks /> } path="/thanks" />
           <Route element={<Privacy />} path="/privacy-policy" />
           <Route element={<FAQ />} path="/faq" />
           <Route element={<Terms />} path="/terms" />

@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 import {useRef, useEffect} from 'react'
 import { hotjar } from 'react-hotjar';
 import emailjs from '@emailjs/browser';
@@ -12,6 +13,7 @@ const Contact = () => {
     hotjar.initialize(3083253,6);
   }, [])
   const form = useRef();
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,6 +21,8 @@ const Contact = () => {
     emailjs.sendForm('service_bp6li5j', 'template_fkhvqxw', form.current, 'user_OJdLjW4coK6cy7d5ELFzC')
       .then((result) => {
           console.log(result.text);
+          navigate("/thanks");
+
       }, (error) => {
           console.log(error.text);
       });
@@ -32,7 +36,6 @@ const Contact = () => {
       transition={transition}
       >
             <Header menu="shopify"/>
-
             <div className="contact-container">
               <div>
                     <h1>Get a Free Quote</h1>
