@@ -25,13 +25,11 @@ function App() {
     <div className="App">
         <Routes>
           <Route element={<Freelance />} path="/" exact />
-          <Route element={<ShopifyDeveloperPage />} path="/shopify"  />
           <Route element={<Earnings /> } path="/earnings" />
           <Route element={<Thanks /> } path="/thanks" />
           <Route element={<Privacy />} path="/privacy-policy" />
           <Route element={<FAQ />} path="/faq" />
           <Route element={<Terms />} path="/terms" />
-          <Route element={<Klinkhoff />} path="/klinkhoff" />
           <Route element={<CaseNovaBloom/>} path="/novabloom" />
           <Route element={<Contact />} path="/contact" />
           <Route element={<EmailMarketing />} path="/shopify/email-marketing"  />
