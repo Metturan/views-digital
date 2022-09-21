@@ -19,7 +19,7 @@ const Testimonials = () => {
                         <li><TestimonialItem client="- Court Order" desc="Project was seamless from start to finish. Keen to really open up the scope and get Metturan to help me dig in and deliver a great website for my business." /></li>
                         {/* <li><TestimonialItem client="- Ecodrive" desc="The work turned out amazing!" /></li> */}
                         {/* <li><TestimonialItem client="- 527 Photo" desc="Fast and accurate work. Thanks!!" /></li> */}
-                        <li><TestimonialItem last={true} client="- TTT Studio" desc="Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project." /></li>
+                        {/* <li><TestimonialItem last={true} client="- TTT Studio" desc="Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project." /></li> */}
                     </ul>
                 </div>
 
