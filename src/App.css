@@ -75,12 +75,13 @@ max-width: 369px;
     align-items: center;
     font-size: 15px;
     flex-direction: column;
+    font-family:proxima-black;
 }
 .freelance-stars img {
   width: 18px;
 }
 .freelance-sales-points h3 {
-  font-family: proxima-bold;
+  font-family: proxima-black;
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -95,7 +96,7 @@ max-width: 369px;
 }
 .freelance-intro h2 {
   font-size: 50px;
-  font-family: 'proxima-bold';
+  font-family: 'proxima-black';
   margin-bottom: 40px;
 }
 .freelance-testies > div {
@@ -108,7 +109,7 @@ max-width: 369px;
   width: 31%;
 }
 .freelance-testies h2 {
-  font-family: 'proxima-bold';
+  font-family: 'proxima-black';
   font-size: 60px;
   text-align: center;
 }
@@ -143,7 +144,7 @@ max-width: 369px;
 .freelance-services-list h3 {
   font-size: 42px;
   text-align: left;
-  font-weight: bold;
+  font-family:proxima-black;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -154,7 +155,7 @@ max-width: 369px;
 }
 .freelance-services h2 {
   font-size: 60px;
-    font-family: 'proxima-bold';
+    font-family: 'proxima-black';
     margin-bottom: 15px;
 }
 .services-tagged {
@@ -225,9 +226,9 @@ max-width: 369px;
 }
 .freelance-body h1 {
   margin: 15px 0;
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 48px;
     line-height: 1.2;
+    font-family: proxima-black;
 }
 .capital-title {
   font-weight:bold;
@@ -748,7 +749,7 @@ footer p {
 
 .hero-half h1 {
   margin-bottom: 10px;
-  font-family: proxima-bold;
+  font-family: proxima-black;
   font-size:53px;
 }
 .widths {
@@ -1474,6 +1475,24 @@ footer p {
     border: 1px solid #000;
     border-radius:5px;
     
+}
+
+.fourOfour img {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto 15px auto;
+    display:block;
+}
+.fourOfour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.fourOfour h1 {
+    font-weight: bold;
+    padding-bottom: 18px;
 }
 .secondstep-back.show {
   visibility:visible;

@@ -33,15 +33,40 @@ const Freelance = () => {
     let elementWithOffset;
 
     useEffect(() => {
-        ScrollTrigger.create({
+          ScrollTrigger.create({
             trigger: testiesSection.current,
             start: 'top center',
             end: 'top center',
-            onEnter: () => [gsap.to('.freelance-page', {backgroundColor: '#fff', color:'#000'}), gsap.to('.freelance-page .header', {backgroundColor: '#fff', color: '#000', borderBottom: '1px solid #ddd'}), gsap.to('.freelance-page #mainLogo', {opacity: 0}),gsap.to('.freelance-page .outline', {color: '#fff', background: '#042825'}), gsap.to('.freelance-page .mobnav > div', {background: '#000'}) ],
-            onEnterBack: () => [gsap.to('.freelance-page', {backgroundColor: '#042825', color:'#fff'}), gsap.to('.freelance-page .header', {backgroundColor: '#042825', color: '#fff', borderBottom: '1px solid #042825'}), gsap.to('.freelance-page #mainLogo', {opacity: 1}), gsap.to('.freelance-page .outline', {color: '#000', background: 'rgb(166, 193, 191)'}), gsap.to('.freelance-page .mobnav > div', {background: '#fff'})]
+            onEnter: () => [gsap.to('.freelance-page', {backgroundColor: '#fff', duration: 1.3, color:'#000'}), gsap.to('.freelance-page .header', {backgroundColor: '#fff', duration: 1.3, color: '#000', borderBottom: '1px solid #ddd'}), gsap.to('.freelance-page #mainLogo', {opacity: 0, duration: 1.3 }),gsap.to('.freelance-page .outline', {color: '#fff',  duration: 1.3, background: '#042825'}), gsap.to('.freelance-page .mobnav > div', {background: '#000', duration: 1.3}) ],
+            onEnterBack: () => [gsap.to('.freelance-page', {backgroundColor: '#042825', duration: 1.3, color:'#fff'}), gsap.to('.freelance-page .header', {backgroundColor: '#042825',  duration: 1.3, color: '#fff', borderBottom: '1px solid #042825'}), gsap.to('.freelance-page #mainLogo', {opacity: 1, duration: 1.3 }), gsap.to('.freelance-page .outline', {color: '#000',  duration: 1.3, background: 'rgb(166, 193, 191)'}), gsap.to('.freelance-page .mobnav > div', {background: '#fff', duration: 1.3})]
           });
 
+          const elems = gsap.utils.toArray('.txt');
+          elems.forEach(elem => {
+            ScrollTrigger.create({
+              trigger: elem,
+              onEnter: function() { animateFrom(elem) }, 
+              onEnterBack: function() { animateFrom(elem) },
+              onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
+            });
+          })
+          
+
     }, [])
+
+    function hide(elem) {
+      gsap.set(elem, {y: 100, autoAlpha: 0});
+    }
+
+    function animateFrom(elem) {
+      gsap.fromTo(elem, {y: 100, autoAlpha: 0}, {
+        duration: 1.25,  
+        autoAlpha: 1, 
+        y:0,
+        ease: "expo", 
+        overwrite: "auto"
+      });
+    }
 
     function scrollToService() {
         elementWithOffset = serviceSection.current.offsetTop - 80;
@@ -81,10 +106,10 @@ const Freelance = () => {
             <section className="freelance-body no-max-widths">
                 <section className="freelance-hero">
                     <div>
-                        <p className="capital-title">Custom Shopify Development</p>
-                        <h1>Unlock More Sales With Expert <span style={{'color':'#a6c1bf'}}>Shopify Development</span></h1>
-                        <p className="freelance-subpara">Focus more on your business and take back your energy and time</p>
-                        <button className="hero-button" onClick={scrollToService}>Learn More</button>
+                        <p className="capital-title txt">Custom Shopify Development</p>
+                        <h1 className="txt">Unlock More Sales With Expert <span style={{'color':'#a6c1bf'}}>Shopify Development</span></h1>
+                        <p className="freelance-subpara txt">Focus more on your business and take back your energy and time</p>
+                        <button className="hero-button txt" onClick={scrollToService}>Learn More</button>
                     </div>
                     <div>
                         <img src={me} />
@@ -93,30 +118,30 @@ const Freelance = () => {
                 <section className="freelance-sales-points">
                     <ul>
                         <li>
-                            <h3>Vetted Shopify Expert</h3>
-                            <p>I've worked on many stores across different countries. I'm also a Shopify Plus developer.</p>
+                            <h3 className="txt">Vetted Shopify Expert</h3>
+                            <p className="txt">I've worked on many stores across different countries. I'm also a Shopify Plus developer.</p>
                         </li>
                         <li>
-                            <h3>Custom Development</h3>
-                            <p>I won't tell you to download apps for everything. I will make sure you know you're options.</p>
+                            <h3 className="txt">Custom Development</h3>
+                            <p className="txt">I won't tell you to download apps for everything. I will make sure you know you're options.</p>
                         </li>
                         <li>
-                            <h3>Great Communication</h3>
-                            <p>I'll speak to you in a way that you'll understand. Talking to a developer should be stress-free.</p>
+                            <h3 className="txt">Great Communication</h3>
+                            <p className="txt">I'll speak to you in a way that you'll understand. Talking to a developer should be stress-free.</p>
                         </li>
                     </ul>
                 </section>
                 <section className='freelance-intro'>
-                    <h2>An Intro About Me</h2>
+                    <h2 className="txt">An Intro About Me</h2>
                     <div className='freelance-intro-vid'>
                         <ResponsivePlayer url={intro} />
                     </div>
                 </section>
                 <section className="freelance-testies" ref={testiesSection}>
-                    <h2>What Other's Had To Say</h2>
+                    <h2 className="txt">What Other's Had To Say</h2>
                     <div>
                         <div className="freelance-testbody">
-                            <p>First time to try Views Digital and it couldn't be any better than with this guy Metturan. Extremely quick and delivers on-time. Communicates effectively and his openness to alternative solutions sealed the deal for me. Thank you!</p>
+                            <p className="txt">First time to try Views Digital and it couldn't be any better than with this guy Metturan. Extremely quick and delivers on-time. Communicates effectively and his openness to alternative solutions sealed the deal for me. Thank you!</p>
                             <div>
                                 <br/>
                                 <p className="freelance-test-p">
@@ -127,11 +152,11 @@ const Freelance = () => {
                                         <img src={star} />
                                         <img src={star} />
                                     </span>
-                                    <strong>- Mark, CEO at Crem Gelato</strong></p>
+                                    <strong className="txt">- Mark, CEO at Crem Gelato</strong></p>
                             </div>
                         </div>
                         <div className="freelance-testbody">
-                            <p>Project was seamless from start to finish. Keen to really open up the scope and get Metturan to help me dig in and deliver a great website for my business.</p>
+                            <p className="txt">Project was seamless from start to finish. Keen to really open up the scope and get Metturan to help me dig in and deliver a great website for my business.</p>
                             <div>
                                 <br/>
                                 <p className="freelance-test-p">
@@ -142,11 +167,11 @@ const Freelance = () => {
                                         <img src={star} />
                                         <img src={star} />
                                     </span>
-                                    <strong>- Ahmed, CEO at Court Order</strong></p>
+                                    <strong className="txt">- Ahmed, CEO at Court Order</strong></p>
                             </div>
                         </div>
                         <div className="freelance-testbody">
-                            <p>Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project.</p>
+                            <p className="txt">Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project.</p>
                             <div>
                                 <br/>
                                 <p className="freelance-test-p">
@@ -157,14 +182,14 @@ const Freelance = () => {
                                         <img src={star} />
                                         <img src={star} />
                                     </span>
-                                    <strong>- Jaclynn Wong at TTT Studios</strong></p>
+                                    <strong className="txt">- Jaclynn Wong at TTT Studios</strong></p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section ref={serviceSection} className="freelance-services">
-                    <h2>Custom Shopify Development</h2>
-                    <p>I offer end to end Shopify solutions ranging from store setup to ongoing maintenance and support.</p>
+                    <h2 className="txt">Custom Shopify Development</h2>
+                    <p className="txt">I offer end to end Shopify solutions ranging from store setup to ongoing maintenance and support.</p>
                     <div className="services-tagged">
                         <ul>
                             <li onClick={scrollToServiceOne}>Theme Modifications</li>
@@ -180,8 +205,8 @@ const Freelance = () => {
                         <ul>
                             <li className="freelance-service-list-item" ref={serviceOne}>
                                 <div>
-                                    <h3>Theme Modifications</h3>
-                                    <p>Need a new store design, a landing page, or you need more functionality built into your Shopify site? I can help to see if you need some existing changes to your current site or build a new store with a new design to help improve the user experience in order to meet your sales goals.</p>
+                                    <h3 className="txt">Theme Modifications</h3>
+                                    <p className="txt">Need a new store design, a landing page, or you need more functionality built into your Shopify site? I can help to see if you need some existing changes to your current site or build a new store with a new design to help improve the user experience in order to meet your sales goals.</p>
                                 </div>
                                 <div>
                                     <img src={five27} />
@@ -189,8 +214,8 @@ const Freelance = () => {
                             </li>
                             <li className="freelance-service-list-item" ref={serviceTwo}>
                                 <div>
-                                    <h3>Technical SEO</h3>
-                                    <p>Everything from speed optimization to ensuring that your Google Search Console is set up properly, Technical Search Engine Optimization (SEO) services deals with making certain that your website is being properly found and indexed by major search engines.</p>
+                                    <h3 className="txt">Technical SEO</h3>
+                                    <p className="txt">Everything from speed optimization to ensuring that your Google Search Console is set up properly, Technical Search Engine Optimization (SEO) services deals with making certain that your website is being properly found and indexed by major search engines.</p>
                                 </div>
                                 <div>
                                     <img src={seotech} />
@@ -198,9 +223,9 @@ const Freelance = () => {
                             </li>
                             <li className="freelance-service-list-item" ref={serviceThree}>
                                 <div>
-                                    <h3>Migrations</h3>
-                                    <p>If you are transitioning from a range of popular or lesser-known platforms to Shopify then you will need to create a strategy and execute properly to ensure all necessary data moves over.</p>
-                                    <p>This involves everything and includes products, orders, customers, categories, images, manufacturers, coupons, reviews, CMS pages, blogs, pricing/inventory rules, and content. It is also important to ensure that there are redirects set up so as not to lose the integrity of your SEO ranking for your store and its individual pages.</p>
+                                    <h3 className="txt">Migrations</h3>
+                                    <p className="txt">If you are transitioning from a range of popular or lesser-known platforms to Shopify then you will need to create a strategy and execute properly to ensure all necessary data moves over.</p>
+                                    <p className="txt">This involves everything and includes products, orders, customers, categories, images, manufacturers, coupons, reviews, CMS pages, blogs, pricing/inventory rules, and content. It is also important to ensure that there are redirects set up so as not to lose the integrity of your SEO ranking for your store and its individual pages.</p>
                                 </div>
                                 <div>
                                     <img src={saddleback} />
@@ -208,8 +233,8 @@ const Freelance = () => {
                             </li>
                             <li className="freelance-service-list-item" ref={serviceFour}>
                                 <div>
-                                    <h3>Store Setup + Product Import</h3>
-                                    <p>I can help with getting your Shopify store set up from scratch. This includes handling complex areas such as product setup, shipping, payment configuration, and tax settings, as well as products/product categories with images and descriptions on your behalf. Our efficient service means your store can be fully operational to start generating sales in no time.</p>
+                                    <h3 className="txt">Store Setup + Product Import</h3>
+                                    <p className="txt">I can help with getting your Shopify store set up from scratch. This includes handling complex areas such as product setup, shipping, payment configuration, and tax settings, as well as products/product categories with images and descriptions on your behalf. Our efficient service means your store can be fully operational to start generating sales in no time.</p>
                                 </div>
                                 <div>
                                     <img src={storesetup} />
@@ -217,8 +242,8 @@ const Freelance = () => {
                             </li>
                             <li className="freelance-service-list-item" ref={serviceFive}>
                                 <div>
-                                    <h3>Custom App Solutions on Shopify</h3>
-                                    <p>I can help build you an app or a third-party plugin that's specific to your stores needs. From checkout extension customizations, shipping services api integrations, to delivery scheduling apps. I'll figure out a strategy that will work best for you and your business goals - that includes time and budget.</p>
+                                    <h3 className="txt">Custom App Solutions on Shopify</h3>
+                                    <p className="txt">I can help build you an app or a third-party plugin that's specific to your stores needs. From checkout extension customizations, shipping services api integrations, to delivery scheduling apps. I'll figure out a strategy that will work best for you and your business goals - that includes time and budget.</p>
                                 </div>
                                 <div>
                                     <img src={novabloom} />
@@ -228,8 +253,8 @@ const Freelance = () => {
                     </div>
                 </section>
                 <section>
-                    <img className="dwnarrow" src={downArrow} />
-                    <h3 className="letstalk">Have a project in mind?<br/> Let’s get to work.</h3>
+                    <img className="dwnarrow txt" src={downArrow} />
+                    <h3 className="letstalk txt">Have a project in mind?<br/> Let’s get to work.</h3>
                     <Link to="/contact" ref={startProjectBtn} id="footerStartProject">Start a Project</Link>
                 </section>
             </section>

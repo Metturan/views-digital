@@ -18,6 +18,7 @@ import About from './About'
 import Services from './Services';
 import ShopifyDeveloperPage from './ShopifyDeveloperPage';
 import Thanks from './Thanks'
+import PageNotFound from './404';
 import EmailMarketing from './EmailMarketing';
 
 function App() {
@@ -37,8 +38,8 @@ function App() {
           <Route element={<ArticleWebhook />} path="/blog/shopify-webhook" />
           <Route element={<ArticleHeadlessRightChoice />} path="/blog/headless-right-choice"/>
           <Route element={<About />} path="/about" />
-          
           <Route element={<Services />} path="/services" />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
     </div>
   );

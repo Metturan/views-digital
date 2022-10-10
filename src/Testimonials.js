@@ -22,7 +22,6 @@ const Testimonials = () => {
                         {/* <li><TestimonialItem last={true} client="- TTT Studio" desc="Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project." /></li> */}
                     </ul>
                 </div>
-
             </section>
         </>
     )
