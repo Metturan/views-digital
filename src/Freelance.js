@@ -170,7 +170,7 @@ const Freelance = () => {
                                     <strong className="txt">- Ahmed, CEO at Court Order</strong></p>
                             </div>
                         </div>
-                        <div className="freelance-testbody">
+                        {/* <div className="freelance-testbody">
                             <p className="txt">Metturan was a huge driving force on the project, who cooly handled every curveball we were thrown in implementing the client's requests. Huge kudos for taking on a very challenging project.</p>
                             <div>
                                 <br/>
@@ -184,7 +184,7 @@ const Freelance = () => {
                                     </span>
                                     <strong className="txt">- Jaclynn Wong at TTT Studios</strong></p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
                 <section ref={serviceSection} className="freelance-services">

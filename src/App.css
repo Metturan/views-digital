@@ -54,19 +54,7 @@ max-width: 369px;
   display: flex;
     margin-bottom: 10px;
 }
-.freelance-testbody > p {
-  min-height:150px;
-}
-@media (max-width: 1400px) {
-  .freelance-testbody > p {
-    min-height: 168px;
-  }
-}
-@media (max-width: 600px) {
-  .freelance-testbody > p {
-    min-height: unset;
-  }
-}
+
 .freelance-hero > div:last-child {
   width: 46%;
 }
@@ -101,12 +89,14 @@ max-width: 369px;
 }
 .freelance-testies > div {
   display:flex;
-  margin-top: 90px;
-  justify-content: space-between;
+  margin: 90px auto 0 auto;
+  max-width: 800px;
+flex-direction: column;
+  justify-content: center;
 }
 .freelance-testbody {
   text-align: center;
-  width: 31%;
+  margin-bottom: 40px;
 }
 .freelance-testies h2 {
   font-family: 'proxima-black';
@@ -117,7 +107,7 @@ max-width: 369px;
     width: 100%;
 }
 .freelance-services-list {
-  margin-top: 200px;
+  margin-top: 120px;
 }
 .freelance-service-list-item{
   display: flex;
@@ -150,7 +140,7 @@ max-width: 369px;
   line-height: 1.2;
 }
 .freelance-services {
-  margin: 200px 0 100px;
+  margin: 120px 0 100px;
   text-align: center;
 }
 .freelance-services h2 {
