@@ -10,11 +10,11 @@ const TestimonialItem = (props) => {
                 </div>
                 <div className={`starsNclient ${props.last == true ? 'starlast' : null}`}>
                     <span className={`stars`}>
-                        <img src={star} />
-                        <img src={star} />
-                        <img src={star} />
-                        <img src={star} />
-                        <img src={star} />
+                        <img src={star} alt="5 star reviews" />
+                        <img src={star} alt="5 star reviews" />
+                        <img src={star} alt="5 star reviews" />
+                        <img src={star} alt="5 star reviews" />
+                        <img src={star} alt="5 star reviews" />
                     </span>
                 </div>
             </div>

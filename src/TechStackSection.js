@@ -32,26 +32,26 @@ const TechStackSection = () => {
                         <span>Our tech stack</span>
                     </div>
                     <div>
-                        <span><img src={logo} /></span>
-                        <span><img src={logo2} /></span>
-                        <span><img src={logo3} /></span>
-                        <span><img src={logo4} /></span>
-                        <span><img src={logo5} /></span>
-                        <span><img src={logo6} /></span>
-                        <span><img src={logo7} /></span>
-                        <span><img src={logo8} /></span>
-                        <span><img src={logo9} /></span>
-                        <span><img id="ruby-maxW" src={ruby} /></span>
-                        <span><img src={logo11} /></span>
-                        <span><img id="react-maxW" src={logo12} /></span>
-                        <span><img src={logo13} /></span>
-                        <span><img src={logo14} /></span>
-                        <span><img src={logo15} /></span>
-                        <span><img src={logo16} /></span>
-                        <span><img src={logo17} /></span>
-                        <span><img src={logo18} /></span>
-                        <span><img src={logo19} /></span>
-                        <span><img src={logo20} /></span>
+                        <span><img src={logo} alt="Archetype Themes" /></span>
+                        <span><img src={logo2} alt="Boost" /></span>
+                        <span><img src={logo3} alt="Gorgias" /></span>
+                        <span><img src={logo4} alt="Klaviyo" /></span>
+                        <span><img src={logo5} alt="Loyalty Lion" /></span>
+                        <span><img src={logo6} alt="OOTs" /></span>
+                        <span><img src={logo7} alt="Recharge" /></span>
+                        <span><img src={logo8} alt="Refersion" /></span>
+                        <span><img src={logo9} alt="Reviews" /></span>
+                        <span><img id="ruby-maxW" src={ruby} alt="Ruby" /></span>
+                        <span><img src={logo11} alt="Node" /></span>
+                        <span><img id="react-maxW" src={logo12} alt="React" /></span>
+                        <span><img src={logo13} alt="Mongo" /></span>
+                        <span><img src={logo14} alt="Redis" /></span>
+                        <span><img src={logo15} alt="Pixel Union" /></span>
+                        <span><img src={logo16} alt="Amazon" /></span>
+                        <span><img src={logo17} alt="Obviyo" /></span>
+                        <span><img src={logo18} alt="Bright Pearl" /></span>
+                        <span><img src={logo19} alt="Hotjar" /></span>
+                        <span><img src={logo20} alt="Octane" /></span>
                     </div>
             </section>
         </>
