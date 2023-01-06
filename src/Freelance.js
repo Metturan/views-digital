@@ -9,6 +9,7 @@ import Footer from './Footer'
 import Header from './Header'
 import downArrow from './images/downarrow.png'
 import me from './freelanceimgs/picofme2.jpg'
+import me2 from './freelanceimgs/me2.jpg'
 import seotech from './freelanceimgs/seotech.png'
 import novabloom from './freelanceimgs/novabloom1.png'
 import storesetup from './freelanceimgs/storesetup.jpg'
@@ -112,7 +113,7 @@ const Freelance = () => {
                         <button className="hero-button txt" onClick={scrollToService}>Learn More</button>
                     </div>
                     <div>
-                        <img src={me} alt="Freelance Developer" />
+                        <img src={me2} alt="Freelance Developer" />
                     </div>
                 </section>
                 <section className="freelance-sales-points">
